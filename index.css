@@ -1,0 +1,324 @@
+/* Phần chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  /* font-size: 16px; */
+}
+
+body {
+  background-image: linear-gradient(to top, #000000, #0066db);
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+/* Thanh điều hướng */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1b1b1b;
+  animation: fadeInUp 2.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar__logo img {
+  border: 4px solid #c1fac1;
+  border-radius: 50%;
+  animation: shadowMove 2s infinite ease-in-out;
+}
+
+@keyframes shadowMove {
+  0% {
+    box-shadow: 20px 0px 30px 6px rgba(73, 254, 215, 0.5);
+  }
+  25% {
+    box-shadow: 0px 20px 30px 6px rgba(72, 176, 255, 0.5);
+  }
+  50% {
+    box-shadow: -20px 0px 30px 6px rgba(78, 245, 81, 0.5);
+  }
+  75% {
+    box-shadow: 0px -20px 30px 6px rgba(194, 255, 102, 0.5);
+  }
+  100% {
+    box-shadow: 20px 0px 30px 6px rgba(202, 253, 73, 0.5);
+  }
+}
+
+.navbar__logo span {
+  font-weight: bolder;
+  font-size: 32px;
+  font-family: "Saira Stencil One", sans-serif;
+  /* Font gradient */
+  background: linear-gradient(to right, hsl(123, 89%, 79%), #33daff);
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar__menu-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navbar__menu-item {
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar__menu-item:hover {
+  background-image: linear-gradient(to right, #144fff, #00d0ff);
+  transform: scale(1.08);
+  background-size: 100%;
+  box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
+}
+
+.navbar__menu-item .active {
+  background-color: #00d0ff;
+}
+
+.navbar__search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar__search img {
+  position: absolute;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar__search input {
+  padding: 0.7rem 1.2rem;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar__search input:focus {
+  box-shadow: 0 0 20px 8px rgba(0, 208, 255, 0.732);
+}
+
+/* Phần header banner */
+
+header {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  position: relative;
+  animation: backInDown 1.5s ease-in-out;
+  height: 100vh;
+}
+
+@keyframes backInDown {
+  0% {
+    transform: translateY(-300px) scale(0.5);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(0px) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.header__banner-text-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ebff39;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Saira Stencil One", sans-serif;
+}
+
+.header__banner-text-subtitle {
+  color: #ffffff;
+  font-size: 1.6rem;
+  /* width: 100%; */
+  font-family: "VT323", monospace;
+}
+
+.header__banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  height: 100%;
+}
+
+.header__banner-button {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.header__banner-button-more {
+  padding: 1rem 3rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  background-image: linear-gradient(to right, #0aebff, #a2ff7a);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.header__banner-button-contact {
+  padding: 1.5rem 3rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.header__banner-button-more:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+.header__banner-button-contact:hover {
+  filter: brightness(1.2);
+  box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+.header__banner-img {
+  width: 95%;
+}
+
+.header_banner-img-man {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+}
+
+.header_banner-img-robot {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  animation: robotJump 3s infinite ease-in-out;
+}
+
+@keyframes robotJump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Phần nội dung chính */
+.main_infor {
+    display: flex;
+    justify-content: center;
+}
+
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+} */
+
+.main_infor-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #000000;
+    padding: 2.5rem;
+    border-radius: 3rem;
+}
+
+.main_infor-content-img {
+    padding: 2rem;
+    border-radius: 4rem;
+    /* background-image: linear-gradient(to top, #53ffd1, #fffee6); */
+}
+
+.main_infor-content-img img{
+    border-radius: 3rem;
+    box-shadow: 0px 0px 100px 15px rgb(255, 255, 255);
+    border: 1px solid rgb(81, 81, 81);
+}
+
+.main_infor-content-text h2 {
+    font-family: Saira Stencil One, sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: transparent;
+    background: linear-gradient(to right, #74ffa0, #f8ff71);
+    background-clip: text;
+}
+
+.main_infor-content-text-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main_infor-content-text-item span {
+    font-weight: bold;
+    color: #a4a4a4;
+}
