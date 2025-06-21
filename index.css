@@ -7,12 +7,52 @@
   /* font-size: 16px; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 95px;
+}
+
 body {
   background-image: linear-gradient(to top, #000000, #0066db);
   color: white;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
+}
+
+/* Cuộn lên đầu trang */
+.scrollToTop {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 1.5rem;
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: bounceIn 1.6s ease-in-out;
+}
+
+.scrollToTop:hover {
+  transform: scale(1.15);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Thanh điều hướng */
@@ -22,7 +62,7 @@ body {
   align-items: center;
   padding: 1rem;
   background-color: #1b1b1b;
-  animation: fadeInUp 2.5s ease-in-out;
+  animation: fadeInUp 3s ease-in-out;
   position: fixed;
   top: 0;
   width: 100%;
@@ -74,7 +114,7 @@ body {
 .navbar__logo span {
   font-weight: bolder;
   font-size: 32px;
-  font-family: "Saira Stencil One", sans-serif;
+  font-family: "Saira Stencil One", "Black Ops One", sans-serif;
   /* Font gradient */
   background: linear-gradient(to right, hsl(123, 89%, 79%), #33daff);
   background-clip: text;
@@ -93,6 +133,11 @@ body {
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  color: white;
+}
+
+.navbar__menu-list a {
+  text-decoration: none;
 }
 
 .navbar__menu-item:hover {
@@ -102,8 +147,32 @@ body {
   box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
 }
 
-.navbar__menu-item .active {
-  background-color: #00d0ff;
+.navbar__menu-item.activeNavbar {
+  background-image: linear-gradient(to right, #1b54ff, #ff1d1d);
+}
+
+.navbar_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#vie-language,
+#usa-language,
+#light-mode,
+#dark-mode {
+  cursor: pointer;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.navbar_mode {
+  display: flex;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .navbar__search {
@@ -149,7 +218,7 @@ header {
   align-items: center;
   position: relative;
   position: relative;
-  animation: backInDown 1.5s ease-in-out;
+  animation: backInDown 2s ease-in-out;
   height: 100vh;
 }
 
@@ -168,12 +237,12 @@ header {
 }
 
 .header__banner-text-title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #ebff39;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Saira Stencil One", sans-serif;
+  font-family: "Saira Stencil One", "Black Ops One", sans-serif;
 }
 
 .header__banner-text-subtitle {
@@ -201,34 +270,43 @@ header {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
   border-radius: 1rem;
   font-size: 1.3rem;
   font-weight: bolder;
   background-image: linear-gradient(to right, #0aebff, #a2ff7a);
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+  box-shadow: 10px 10px 50px 1px rgb(31, 31, 31);
 }
 
-.header__banner-button-contact {
+.header__banner-button-downloadcv {
   padding: 1.5rem 3rem;
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
   font-size: 1.3rem;
   font-weight: bolder;
   transition: all 0.5s ease-in-out;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  box-shadow: 10px 10px 50px 1px rgb(31, 31, 31);
 }
 
 .header__banner-button-more:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.2);
   box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
   transform: scale(1.05);
 }
 
-.header__banner-button-contact:hover {
+.header__banner-button-downloadcv:hover {
   filter: brightness(1.2);
   box-shadow: 0px 0px 20px 3px rgb(255, 255, 255);
   transform: scale(1.05);
@@ -263,10 +341,24 @@ header {
   }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+}
+
 /* Phần nội dung chính */
 .main_infor {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  background-color: #ffffff1a;
+  padding: 2.5rem;
+  /* width: 70%; */
+  margin: 0 auto;
+  border-radius: 3rem;
+  transition: all 0.5s ease-in-out;
 }
 
 /* @keyframes fadeIn {
@@ -281,44 +373,688 @@ header {
 } */
 
 .main_infor-content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    background-color: #000000;
-    padding: 2.5rem;
-    border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #e8e8e8, #9b9b9b);
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 50px 25px rgba(121, 255, 231, 0.482);
+}
+
+.main_infor:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 100px 25px rgba(255, 255, 255, 0.482);
+  background-color: #ffffff67;
 }
 
 .main_infor-content-img {
-    padding: 2rem;
-    border-radius: 4rem;
-    /* background-image: linear-gradient(to top, #53ffd1, #fffee6); */
+  padding: 2rem;
+  border-radius: 4rem;
+  transition: all 0.5s ease-in-out;
 }
 
-.main_infor-content-img img{
-    border-radius: 3rem;
-    box-shadow: 0px 0px 100px 15px rgb(255, 255, 255);
-    border: 1px solid rgb(81, 81, 81);
+/* .main_infor-content-img:hover {
+  box-shadow: 0px 0px 50px 15px rgba(121, 255, 231, 0.482);
+  filter: brightness(1.1);
+  transform: scale(1.05);
+} */
+
+.main_infor-content-img.active-img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.main_infor-content-img img {
+  border-radius: 3rem;
+  box-shadow: 0px 0px 50px 20px rgb(255, 255, 255);
+  cursor: pointer;
+  border: 1px solid rgb(172, 172, 172);
 }
 
 .main_infor-content-text h2 {
-    font-family: Saira Stencil One, sans-serif;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: transparent;
-    background: linear-gradient(to right, #74ffa0, #f8ff71);
-    background-clip: text;
+  font-family: Saira Stencil One, "Black Ops One", sans-serif;
+  font-size: 2.8rem;
+  margin: 1.2rem auto;
+  color: transparent;
+  background: linear-gradient(to right, #ff0000, #d400ff);
+  background-clip: text;
+  text-align: center;
+  letter-spacing: 0.4rem;
 }
 
 .main_infor-content-text-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 .main_infor-content-text-item span {
-    font-weight: bold;
-    color: #a4a4a4;
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #ff0000;
+  border-radius: 3rem;
+  padding: 0.6rem 0;
+  width: 190px;
+  text-align: center;
+}
+
+.main_infor-content-text-item p {
+  font-weight: bold;
+  color: #b5b5b5;
+  background-image: linear-gradient(to right, #48ffe7, #f8ff71);
+  color: black;
+  border-radius: 3rem;
+  padding: 0.6rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Mục tiêu nghề nghiệp */
+.main_career-goal-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff63;
+  padding: 2rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.482);
+  transition: all 0.5s ease-in-out;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main_career-goal-content {
+  background-image: linear-gradient(to top, #fbfbfb, #ee3efe);
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.main_career-goal-content-container:hover {
+  background-color: #ffffff71;
+  box-shadow: 0px 0px 50px 25px rgba(255, 255, 255, 0.482);
+  transform: scale(1.05);
+}
+
+.main_career-goal-content {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 80%; */
+}
+
+.main_career-goal-content-img {
+  padding: 2rem;
+  background-color: #ffffffcd;
+  border-radius: 3.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.main_career-goal-content-img img {
+  border-radius: 3rem;
+  box-shadow: 0px 0px 50px 20px rgb(255, 255, 255);
+}
+
+.main_career-goal-content-img:hover {
+  /* transform: scale(1.05); */
+  box-shadow: 0px 0px 75px 30px rgba(255, 255, 255, 0.482);
+  filter: brightness(1.12);
+}
+
+.main_career-goal-content-text h2 {
+  font-family: Saira Stencil One, "Black Ops One", sans-serif;
+  font-size: 2.6rem;
+  margin: 1.2rem auto;
+  color: transparent;
+  background: linear-gradient(to right, #ffff1b, #4cffe7);
+  background-clip: text;
+  text-align: center;
+  /* letter-spacing: 0.6rem; */
+}
+
+.main_career-goal-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.main_career-goal-content-list-item {
+  font-size: 1.2rem;
+  word-spacing: 0.4rem;
+  line-height: 1.4rem;
+  font-weight: bold;
+  color: #b5b5b5;
+  background-image: linear-gradient(to right, #ff0000, #2231ff);
+  color: rgb(255, 255, 255);
+  border-radius: 3rem;
+  padding: 0.6rem 1.5rem;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.main_career-goal-content-list-item:hover {
+  background-image: linear-gradient(to right, #e70000, #000fe4);
+}
+
+/* Sở thích */
+.main_hobby-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff70;
+  padding: 1.5rem 2.5rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 50px 25px rgba(255, 255, 255, 0.482);
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main_hobby-content {
+  background-image: linear-gradient(to top, #ffffffb3, #858585);
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 100%;
+  /* width: 50%; */
+}
+
+.main_hobby-content-lottie {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  z-index: 1;
+}
+
+/* .main_hobby-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 100px 25px rgba(255, 255, 255, 0.482);
+    filter: brightness(1.03);
+} */
+
+.main_hobby-content-title {
+  background: linear-gradient(to RIGHT, #49fcf9, #fffb1c);
+  border-radius: 1rem;
+}
+
+.main_hobby-content-title h2 {
+  font-family: Saira Stencil One, "Black Ops One", sans-serif;
+  font-size: 2.5rem;
+  color: transparent;
+  padding: 0.5rem 0;
+  background: linear-gradient(to top, #ff0000, #ee00ff);
+  /* text-shadow: 2px 2px 4px rgba(255, 254, 175, 0.5); */
+  background-clip: text;
+  text-align: center;
+  letter-spacing: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.main_hobby-content-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.main_hobby-content-list figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.main_hobby-content-list figcaption {
+  font-family: "VT323", monospace;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.main_hobby-content-list-img {
+  border-radius: 2rem;
+  box-shadow: 0px 0px 50px 10px rgba(232, 232, 232, 0.482);
+  border: 1px solid rgb(81, 81, 81);
+  transition: all 0.5s ease-in-out;
+}
+
+.main_hobby-content-list-img:hover {
+  box-shadow: 0px 0px 75px 30px rgba(255, 255, 255, 0.482);
+  transform: scale(1.05);
+  filter: brightness(1.12);
+}
+
+.main_hobby-content-list figure:hover {
+  transform: scale(1.04);
+  font-weight: bold;
+  /* font-size: 1.2rem; */
+}
+
+/* Kỹ năng */
+.main_skills {
+  background-color: #ffffff7b;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.8rem;
+  border-radius: 3rem;
+  color: black;
+  box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 0.482);
+}
+
+.main_skills-content {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  background-image: linear-gradient(to top, #ffffff, #ff9c2c);
+  gap: 2rem;
+  border-radius: 2rem;
+  padding: 1.8rem;
+}
+.main_skills-content-right-item {
+  display: none;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.main_skills-content-left-button button.choosen {
+  background-color: #e6fb04;
+}
+
+.main_skills-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-image: linear-gradient(
+    to top,
+    rgb(255, 240, 128),
+    rgb(116, 255, 255)
+  );
+  padding: 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 10px 10px 35px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main_skills-content-left-intro h2 {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-size: 1.7rem;
+  font-style: normal;
+  background-image: linear-gradient(to left, #f3ff51, #fae4ff);
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 20px 10px rgba(143, 143, 143, 0.2);
+}
+
+.main_skills-content-left-intro p {
+  font-family: "Shantell Sans", cursive;
+  word-spacing: 0.4rem;
+  padding: 0 1rem;
+  line-height: 1.4rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #0331ff;
+}
+
+.main_skills-content-left-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.main_skills-content-right-item-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main_skills-content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-image: linear-gradient(
+    to top,
+    rgb(187, 255, 255),
+    rgb(236, 255, 116)
+  );
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
+
+.main_skills-content-left-intro::after,
+.main_skills-content-right-item-heading::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255, 157, 9);
+}
+
+.main_skills-content-right-item.active {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.main_skills-content-right-item-heading-title h3 {
+  font-family: "DynaPuff", system-ui;
+  font-size: 2rem;
+  letter-spacing: 0.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+.main_skills-content-right-item-heading-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: linear-gradient(to right, #ff7373, rgb(33, 66, 255));
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  color: white;
+  box-shadow: 5px 5px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main_skills-content-right-item-heading p {
+  font-family: "Shantell Sans", cursive;
+  font-weight: bold;
+  /* font-style: italic; */
+  background-image: linear-gradient(to right, #fe16fe, rgb(26, 45, 255));
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.main_skills-content-left-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.main_skills-content-left-button button {
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 10px rgba(115, 115, 115, 0.2);
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  transition: all 1s ease-in-out;
+}
+
+.main_skills-content-left-button button:hover {
+  background-color: #76ff2c;
+}
+
+.main_skills-content-right-item-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  justify-items: center; /* căn giữa từng ảnh trong cột */
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  gap: 1rem;
+}
+
+.main_skills-content-right-item-img img {
+  /* border: 1px solid rgb(136, 136, 136); */
+  box-shadow: 5px 5px 50px 10px rgba(70, 70, 70, 0.2);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  object-fit: contain;
+  background-color: white;
+  cursor: pointer;
+}
+
+.main_skills-content-right-item-img-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1.2rem;
+}
+
+.main_skills-content-right-item-img-detail span {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(0, 68, 255);
+}
+
+.main_skills-content-right-item-img img:hover {
+  animation: flash 0.3s infinite ease-in-out;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Phần dự án */
+.main_projects {
+  background-color: #ffffff7b;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.8rem;
+  border-radius: 3rem;
+  color: black;
+  box-shadow: 0px 0px 30px 15px rgba(255, 255, 255, 0.482);
+  position: relative;
+}
+
+.main_projects-content {
+  grid-template-columns: 1fr 1fr;
+  background-image: linear-gradient(to top, #ffffff, #fcff44);
+  gap: 2rem;
+  border-radius: 2rem;
+  padding: 1.8rem;
+  display: none;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.main_projects-content.active {
+  display: grid;
+}
+
+.main_projects-content-img img {
+  border-radius: 2rem;
+  border: 1px solid rgb(195, 195, 195);
+  box-shadow: 0px 0px 50px 20px rgb(175, 175, 175);
+}
+
+.main_projects-content-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.main_projects-content-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main_projects-content-detail-title h1 {
+  font-family: "Saira Stencil One", "Black Ops One", sans-serif;
+  font-size: 8rem;
+  height: 130px;
+}
+
+.main_projects-content-detail-title-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* gap: 0.5rem; */
+}
+
+.main_projects-content-detail-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main_projects-content-detail-link {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.main_projects-content-detail-title-text h2 {
+  font-family: "Shantell Sans", cursive;
+  font-size: 2.8rem;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.main_projects-content-detail-title-text span {
+  font-family: "VT323", monospace;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #777777;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.main_projects-content-img-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main_projects-content-img-button img {
+  cursor: pointer;
+}
+
+.main_projects-content-img-button-page span {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: rgb(255, 0, 255);
+}
+
+.main_projects-content-img-button img:first-child {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main_projects-content-img-button img:last-child {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.main_projects-content-detail-description {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2rem;
+  /* margin-top: 1rem; */
+  color: #000000;
+}
+
+.main_projects-content-detail-description p:first-child {
+  /* font-size: 1.4rem; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  /* color: #ffffff; */
+  background-image: linear-gradient(to right, #ffffff, #ffffff);
+  padding: 1rem 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 6px 6px 25px 10px rgba(0, 0, 0, 0.25);
+}
+
+.main_projects-content-detail-description-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  gap: 1.2rem;
+}
+
+.main_projects-content-detail-description-features h4 {
+  background-image: linear-gradient(to right, #f700ff, #2437ff);
+  color: white;
+  padding: 1rem 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+  flex: 0 0 20%;
+  text-align: center;
+}
+
+.main_projects-content-detail-description-features p {
+  background-color: rgb(255, 132, 39);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  flex: 0 0 80%;
+  text-align: center;
+  width: 100%;
+  line-height: 1.4rem;
+}
+
+.main_projects-content-detail-description-techs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main_projects-content-detail-description-techs h4 {
+  background-image: linear-gradient(to right, #f700ff, #2437ff);
+  color: white;
+  padding: 1rem 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+}
+
+.main_projects-content-detail-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main_projects-content-detail-link-open {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.main_projects-content-detail-link p {
+  /* font-weight: bold; */
+}
+
+.main_projects-content-detail-link-open img {
+  border-radius: 50%;
 }
