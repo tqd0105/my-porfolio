@@ -16,20 +16,22 @@
     <!-- Thanh điều hướng -->
     <nav class="navbar">
       <a class="navbar__logo" href="#">
-        <div class="navbar__logo-img">
-          <img src="./images/logo.png" width="50" height="50" alt="" />
+        <div class="navbar__logo-img-container">
+          <div class="navbar__logo-img">
+            <img src="./images/logo.png" width="50" height="50" alt="" />
+          </div>
         </div>
         <span>ABOUT ME</span>
         <div class="box-animation"></div>
       </a>
       <div class="navbar__menu-list">
-  <a href="#" class="navbar__menu-item activeNavbar">Trang chủ</a>
-  <a href="#hobby" class="navbar__menu-item">Sở thích</a>
-  <a href="#career" class="navbar__menu-item">Sự nghiệp</a>
-  <a href="#skills" class="navbar__menu-item">Kỹ năng</a>
-  <a href="#projects" class="navbar__menu-item">Dự án</a>
-  <a href="#contact" class="navbar__menu-item">Liên hệ</a>
-</div>
+        <a href="#home" class="navbar__menu-item activeNavbar">Trang chủ</a>
+        <a href="#hobby" class="navbar__menu-item">Sở thích</a>
+        <a href="#career" class="navbar__menu-item">Sự nghiệp</a>
+        <a href="#skills" class="navbar__menu-item">Kỹ năng</a>
+        <a href="#projects" class="navbar__menu-item">Dự án</a>
+        <a href="#contact" class="navbar__menu-item">Liên hệ</a>
+      </div>
 
       <div class="navbar_right">
         <div class="navbar_mode">
@@ -38,15 +40,10 @@
               src="./icons/vietnam.png"
               width="30"
               alt=""
+              class="hidden"
               id="vie-language"
             />
-            <img
-              src="./icons/usa.png"
-              width="30"
-              alt=""
-              class="hidden"
-              id="usa-language"
-            />
+            <img src="./icons/usa.png" width="30" alt="" id="usa-language" />
           </div>
           <div class="navbar_mode-uiColor">
             <img
@@ -141,26 +138,26 @@
                 <p>01/11/2005</p>
               </div>
               <div class="main_infor-content-text-item">
-                <span>Quê quán</span>
-                <p>Bình Sơn, Quảng Ngãi</p>
-              </div>
-              <div class="main_infor-content-text-item">
-                <span>Trường học</span>
-                <p>Trường Đại học Giao Thông Vận Tải TP.HCM</p>
-              </div>
-              <div class="main_infor-content-text-item">
                 <span>Di động</span>
                 <p>0386770836</p>
               </div>
               <div class="main_infor-content-text-item">
                 <span>Email</span>
-                <p>tranquangdung.tech@gmail.com</p>
+                <p>tqd.tech@gmail.com</p>
               </div>
-
+              <div class="main_infor-content-text-item">
+                <span>Quê quán</span>
+                <p>Bình Sơn, Quảng Ngãi</p>
+              </div>
               <div class="main_infor-content-text-item">
                 <span>Địa chỉ</span>
                 <p>Thủ Đức, TP. HCM, Việt Nam</p>
               </div>
+              <div class="main_infor-content-text-item">
+                <span>Trường học</span>
+                <p>Trường Đại học Giao Thông Vận Tải TP.HCM</p>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -456,13 +453,14 @@
               </p>
               <div class="main_projects-content-detail-description-features">
                 <h4>Highlights</h4>
-                <p>Responsive UI, Grid CSS, Flexbox and more.
-</p>
+                <p>Responsive UI, Grid CSS, Flexbox and more.</p>
               </div>
               <!-- Mô tả dự án -->
               <div class="main_projects-content-detail-description-techs">
                 <h4>Technologies</h4>
-                <div>
+                <div
+                  class="main_projects-content-detail-description-techs-list"
+                >
                   <img src="./images/html5.png" width="80" alt="" />
                   <img src="./images/css.png" width="80" alt="" />
                   <!-- <img src="./images/js.png" width="80" alt="" /> -->
@@ -471,10 +469,16 @@
               <!-- Công nghệ sử dụng -->
             </div>
             <div class="main_projects-content-detail-link">
-              <p>10/2023 - 11/2023</p>
+              <p>10/2023 - 12/2023</p>
               <div class="main_projects-content-detail-link-open">
-                <a href=""><img src="./icons/link.png" width="40" alt="" /></a>
-                <a href=""
+                <a
+                  target="_blank"
+                  href="https://tqd0105.github.io/SoundCloudInterface/"
+                  ><img src="./icons/link.png" width="40" alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://github.com/tqd0105/SoundCloudInterface"
                   ><img src="./icons/github.png" width="40" alt=""
                 /></a>
               </div>
@@ -510,18 +514,27 @@
               <!-- Mô tả dự án -->
               <div class="main_projects-content-detail-description-techs">
                 <h4>Technologies</h4>
-                <div>
+                <div
+                  class="main_projects-content-detail-description-techs-list"
+                >
                   <img src="./images/html5.png" width="80" alt="" />
                   <img src="./images/css.png" width="80" alt="" />
-                  <!-- <img src="./images/js.png" width="80" alt="" /> -->
+                  <img src="./images/scss.png" width="80" alt="" />
+                  <img src="./images/js.png" width="80" alt="" />
                 </div>
               </div>
             </div>
             <div class="main_projects-content-detail-link">
-              <p>10/2023 - 11/2023</p>
+              <p>10/2023 - 12/2023</p>
               <div class="main_projects-content-detail-link-open">
-                <a href=""><img src="./icons/link.png" width="40" alt="" /></a>
-                <a href=""
+                <a
+                  target="_blank"
+                  href="https://tqd0105.github.io/BraveSale-OnlineCommerce/"
+                  ><img src="./icons/link.png" width="40" alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://github.com/tqd0105/BraveSale-OnlineCommerce"
                   ><img src="./icons/github.png" width="40" alt=""
                 /></a>
               </div>
@@ -544,32 +557,69 @@
             </div>
             <div class="main_projects-content-detail-description">
               <p>
-                SpaceZone is a social networking website inspired by the design
-                of Facebook and Instagram. It includes essential features of a
-                social media platform with the goal of understanding how such
-                systems actually work, improving my development skills, and
-                gaining hands-on experience with backend technologies.
+                SpaceZone is a social networking website inspired by Facebook
+                and Instagram. It replicates core social media features to help
+                me understand real-world system behavior. The project also
+                strengthens my skills in backend technologies and full-stack
+                development.
               </p>
               <div class="main_projects-content-detail-description-features">
                 <h4>Highlights</h4>
-                <p>Login-Auth, Post, Delete, Like, Comment, Share UI, Profile (Edit, Delete), Responsive UI
-</p>
+                <p>
+                  Login-Auth, Post, Delete, Like, Comment, Share UI, Profile
+                  (Edit, Delete), Responsive UI
+                </p>
               </div>
               <!-- Mô tả dự án -->
               <div class="main_projects-content-detail-description-techs">
                 <h4>Technologies</h4>
-                <div>
-                  <img src="./images/html5.png" width="80" alt="" />
-                  <img src="./images/css.png" width="80" alt="" />
-                  <!-- <img src="./images/js.png" width="80" alt="" /> -->
+                <div class="long-list-container">
+                  <div
+                    class="main_projects-content-detail-description-techs-list long-list"
+                  >
+                    <img src="./images/html5.png" width="80" alt="" />
+                    <img src="./images/scss.png" width="80" alt="" />
+                    <img src="./images/js.png" width="80" alt="" />
+                    <img src="./images/reactjs.png" width="80" alt="" />
+                    <img src="./images/nodejs.png" width="80" alt="" />
+                    <img src="./images/expressjs.png" width="80" alt="" />
+                    <img
+                      src="./images/mongodb-seeklogo.png"
+                      width="80"
+                      alt=""
+                    />
+                    <img src="./images/tailwindcss.png" width="80" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="main_projects-content-detail-description-techs-list-direction"
+                >
+                  <img
+                    src="./icons/next2.png"
+                    id="next-tech"
+                    width="30"
+                    alt=""
+                  />
+                  <img
+                    src="./icons/previous2.png"
+                    id="prev-tech"
+                    width="30"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
             <div class="main_projects-content-detail-link">
               <p>10/2023 - 11/2023</p>
               <div class="main_projects-content-detail-link-open">
-                <a href=""><img src="./icons/link.png" width="40" alt="" /></a>
-                <a href=""
+                <a
+                  target="_blank"
+                  href="https://tqd0105.github.io/SpaceZone---Social-Media/#/login"
+                  ><img src="./icons/link.png" width="40" alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://github.com/tqd0105/SpaceZone---Social-Media"
                   ><img src="./icons/github.png" width="40" alt=""
                 /></a>
               </div>
@@ -582,53 +632,159 @@
           <img src="./icons/next.png" id="nextBtn" width="50" alt="" />
         </div>
       </section>
-      <section id="contact">
-        <h2>Liên hệ</h2>
-        <div>
-          <div>
-            <h3>CONTACT NOW!</h3>
-            <div>
-              <div>
-                <input type="text" placeholder="Firstname" />
-                <input type="text" placeholder="Lastname" />
+      <section class="main_contact" id="contact">
+        <div class="main_contact-content">
+          <h3>CONTACT NOW!</h3>
+          <div class="main_contact-content-wrapper">
+            <div class="main_contact-content-form">
+              <div class="main_contact-content-form-input">
+                <div class="main_contact-content-form-input-name">
+                  <input type="text" placeholder="Firstname" />
+                  <input type="text" placeholder="Lastname" />
+                </div>
+                <div class="main_contact-content-form-input-email">
+                  <input type="email" placeholder="Email address" />
+                  <input type="number" placeholder="Phone number" />
+                </div>
+                <div class="main_contact-content-form-input-address">
+                  <input type="text" placeholder="Type your address here." />
+                </div>
+                <div class="main_contact-content-form-input-message">
+                  <textarea placeholder="Type your message here."></textarea>
+                </div>
               </div>
-              <div>
-                <input type="email" placeholder="Email address" />
-                <input type="number" placeholder="Phone number" />
-              </div>
-              <input type="text" placeholder="Type your message here." />
+              <button id="send">
+                <span >Send message</span>
+              </button>
+              <button class="main_contact-content-form-input-success">
+                  <img src="./icons/check.png" width="25" alt="">
+                  <span>Đã gửi thành công</span>
+              </button>
             </div>
-            <button>Send</button>
-          </div>
-          <div>
-            <div>
-              <img src="" alt="" />
-              <div>
-                <span>Email</span>
-                <a href="mailto:info@example.com"
-                  >tranquangdung.tech@example.com</a
-                >
-              </div>
-            </div>
-            <div>
-              <img src="" alt="" />
-              <div>
-                <span>Phone</span>
-                <a href="mailto:info@example.com">0386770836</a>
-              </div>
-            </div>
-            <div>
-              <img src="" alt="" />
-              <div>
-                <span>Telegram</span>
-                <a target="_blank" href="https://t.me/tqd0105">t.me/tqd0105</a>
-              </div>
+            <div class="main_contact-content-infor">
+              <a class="main_contact-content-infor-title" href="mailto:info@example.com">
+                <img src="./icons/gmail.png" width="45" alt="" />
+                <div class="main_contact-content-infor-title-text">
+                  <span>Email</span>
+                  <span >tqd.tech@gmail.com</span>
+                </div>
+              </a>
+              <a class="main_contact-content-infor-title" href="tel:0386770836">
+                <img src="./icons/phone.png" width="45" alt="" />
+                <div class="main_contact-content-infor-title-text">
+                  <span>Phone</span>
+                  <span >0386770836</span>
+                </div>
+              </a>
+              <a class="main_contact-content-infor-title" target="_blank" href="http://t.me">
+                <img src="./icons/telegram.png" width="45" alt="" />
+                <div class="main_contact-content-infor-title-text">
+                  <span>Telegram</span>
+                  <span>t.me/username</span>
+                </div>
+              </a>
+              <a class="main_contact-content-infor-title" target="_blank" href="https://www.linkedin.com">
+                <img src="./icons/linkedln.png" width="45" alt="" />
+                <div class="main_contact-content-infor-title-text">
+                  <span>Linkedln</span>
+                  <span 
+                    >@username</span>
+                </div>
+              </a>
+
+              <a class="main_contact-content-infor-title" target="_blank" href="https://zalo.me">
+                <img src="./icons/zalo.png" width="45" alt="" />
+                <div class="main_contact-content-infor-title-text">
+                  <span>Zalo</span>
+                  <span >0386770836</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer__top">
+        <h3>THANK YOU!</h3>
+        <div class="footer__top-text">
+          <p>View all</p>
+          <img src="./icons/nextcolorful.png" width="50" alt="" />
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer__left">
+          <a class="footer__left-logo" href="#">
+            <img src="./images/logo.png" width="50" height="50" alt="" />
+            <h3>TRAN QUANG DUNG</h3>
+          </a>
+          <p class="footer__left-description">
+            A small corner where I share my information, skills, future goals,
+            and highlight projects throughout my journey in programming.
+          </p>
+          <div class="footer__left-social">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./icons/facebook.png" width="30" alt="Facebook" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./icons/instagram.png" width="30" alt="Instagram" />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./icons/twitter.png" width="30" alt="Twitter" />
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./icons/youtube.png" width="30" alt="Telegram" />
+            </a>
+            <a
+              href="https://reddit.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./icons/reddit.png" width="30" alt="Reddit" />
+            </a>
+          </div>
+        </div>
+        <div class="footer__center">
+          <h3>Other</h3>
+          <div class="footer__center-links">
+            <a href=""> My stories </a>
+            <a href=""> Experiences </a>
+            <a href=""> Team </a>
+            <a href=""> Blog </a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <h3>Tags</h3>
+          <div class="footer__right-tags">
+            <a href=""> #HTML </a>
+            <a href=""> #CSS </a>
+            <a href=""> #SCSS </a>
+            <a href=""> #TailwindCSS </a>
+            <a href=""> #JavaScript </a>
+            <a href=""> #ReactJS </a>
+            <a href=""> #NodeJS </a>
+            <a href=""> #ExpressJS </a>
+            <a href=""> #MongoDB </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <div class="cursor"></div>
     <div class="scrollToTop" id="scroll_to_top">
       <img src="./icons/up.png" width="60" alt="" />

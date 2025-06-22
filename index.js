@@ -127,3 +127,59 @@ nextBtn.addEventListener("click", ()=> {
 showPage(currentPage); 
 
 // Lướt đến phần nào thì navbar cũng highlight phần đó
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar__menu-item");
+
+window.addEventListener("scroll", () => {
+  let current = null;
+  console.log(window.pageYOffset);
+  
+  // Nếu đang ở đầu trang (ví dụ < 100px), coi là "home"
+  if (window.pageYOffset < 1600) {
+    current = "home";
+  } else {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+  }
+
+  // reset + apply active
+  navLinks.forEach((link) => {
+    link.classList.remove("activeNavbar");
+    if (current && link.getAttribute("href").includes(current)) {
+      link.classList.add("activeNavbar");
+    }
+  });
+});
+
+// Hiển thị các công nghệ sử dụng bằng next và prev
+const nextTechBtn = document.getElementById("next-tech");
+const prevTechBtn = document.getElementById("prev-tech");
+const techItems = document.querySelector(".long-list");
+
+nextTechBtn.addEventListener("click", () => {
+  techItems.style.transform = "translateX(-100%)";
+})
+
+prevTechBtn.addEventListener("click", () => {
+  techItems.style.transform = "translateX(0)";
+});
+
+// Gửi tin nhắn ở contact
+const sendBtn = document.getElementById("send")
+const successBtn = document.querySelector(".main_contact-content-form-input-success");
+
+sendBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  successBtn.style.display = "flex";
+  sendBtn.style.display = "none";
+  setTimeout(() => {
+    successBtn.style.display = "none";
+    sendBtn.style.display = "block";
+  }, 2000);
+})
