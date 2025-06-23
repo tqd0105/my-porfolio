@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-image: linear-gradient(to top, #000000, #0066db);
 }
 
 section {
@@ -21,6 +22,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
+  transition: background-color 1.5s ease-in-out;
+}
+
+body.dark-theme{
+  /* color: white; */
+  background-image: none !important;
+  background-color: black !important;
 }
 
 /* Cuộn lên đầu trang */
@@ -168,12 +176,14 @@ body {
 .navbar__menu-list {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 
 .navbar__menu-item {
   font-weight: bold;
-  padding: 1rem;
+  padding: 1rem ;
+  width: 100px;
+  text-align: center;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -209,7 +219,7 @@ body {
 #light-mode,
 #dark-mode {
   cursor: pointer;
-  animation: fadeIn 1.2s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .navbar_mode {
@@ -1346,8 +1356,8 @@ footer {
   gap: 1rem;
   width: 85%;
   margin: auto;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-top: 8rem;
+  margin-bottom: 2.5rem;
 }
 
 .footer__top {
