@@ -749,9 +749,9 @@ main {
 }
 
 .main_skills-content-left-intro h2 {
-  font-family: "Rubik Bubbles", system-ui;
-  font-weight: 400;
-  font-size: 1.7rem;
+  font-family: Saira Stencil One, "Black Ops One", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
   font-style: normal;
   background-image: linear-gradient(to left, #f3ff51, #fae4ff);
   padding: 1rem 1rem;
@@ -762,12 +762,12 @@ main {
 }
 
 .main_skills-content-left-intro p {
-  font-family: "Shantell Sans", cursive;
+    font-family: "Josefin Sans", sans-serif;
   word-spacing: 0.4rem;
   padding: 0 1rem;
   line-height: 1.4rem;
   font-weight: bold;
-  font-style: italic;
+  /* font-style: italic; */
   color: #0331ff;
 }
 
@@ -844,9 +844,10 @@ main {
 }
 
 .main_skills-content-right-item-heading-title h3 {
-  font-family: "DynaPuff", system-ui;
+    font-family: Saira Stencil One, "Black Ops One", sans-serif;
+
   font-size: 2rem;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.4rem;
   color: white;
   font-weight: bold;
 }
@@ -864,7 +865,7 @@ main {
 }
 
 .main_skills-content-right-item-heading p {
-  font-family: "Shantell Sans", cursive;
+    font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   /* font-style: italic; */
   background-image: linear-gradient(to right, #fe16fe, rgb(26, 45, 255));
