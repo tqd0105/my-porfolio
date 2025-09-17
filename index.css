@@ -966,7 +966,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.8rem;
   /* max-height: 560px; */
 }
 
@@ -979,15 +979,15 @@ main {
 .main_projects-content-detail-title h1 {
   font-family: "Saira Stencil One", "Black Ops One", sans-serif;
   font-size: 8rem;
-  height: 130px;
+  /* height: 120px; */
 }
 
 .main_projects-content-detail-title-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  /* gap: 0.5rem; */
+  height: fit-content;
+  /* gap: 0.2rem; */
 }
 
 .main_projects-content-detail-description {
@@ -1011,7 +1011,7 @@ main {
 .main_projects-content-detail-title-text span {
   font-family: "VT323", monospace;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #777777;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
@@ -1048,7 +1048,7 @@ main {
 
 .main_projects-content-detail-description {
   border-bottom: 1px solid #000000;
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
   /* margin-top: 1rem; */
   color: #000000;
 }
@@ -1092,9 +1092,9 @@ main {
   background-color: #ffffff99;
   padding: 1rem;
   border-radius: 1.5rem;
-  box-shadow: 0px 0px 15px 3px rgb(126 126 126 / 50%);
+  box-shadow: 0px 0px 15px 3px rgb(195 195 195 / 50%);
   position: absolute;
-  top: 40%;
+  top:45%;
   z-index: 0;
 }
 
@@ -1136,14 +1136,40 @@ main {
 
 .main_projects-content-detail-link-open {
   display: flex;
-  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.main_projects-content-detail-link-open-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: 800;
+  /* color: white; */
+  padding: 0.6rem 0.8rem;
+  border-radius: 4rem;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.main_projects-content-detail-link-open-items.live-demo {
+  background-image: linear-gradient(-225deg, #55ff67 0%, #6292ff 100%);
+  color: rgb(255, 255, 255);
+}
+
+.main_projects-content-detail-link-open-items.source-code {
+  background-image: linear-gradient(to top, #c35ee1 0%, #ee5f80 100%);
+  color: rgb(255, 255, 255);
 }
 
 .main_projects-content-detail-description-techs-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .main_projects-content-detail-description-techs-list img {
@@ -1153,13 +1179,14 @@ main {
 }
 
 .long-list-container {
-  width: 355px;
+  width: 395px;
   overflow: hidden;
 }
 
 .long-list {
   display: flex;
   justify-content: flex-start;
+  padding: 0.4rem ; 
   transition: transform 1s ease-in-out;
 }
 

@@ -163,7 +163,7 @@ const prevTechBtn = document.getElementById("prev-tech");
 const techItems = document.querySelector(".long-list");
 
 nextTechBtn.addEventListener("click", () => {
-  techItems.style.transform = "translateX(-100%)";
+  techItems.style.transform = "translateX(-90%)";
 })
 
 prevTechBtn.addEventListener("click", () => {
