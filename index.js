@@ -178,8 +178,8 @@ nextTechBtns.forEach((nextBtn, index) => {
     // Sử dụng scrollWidth để lấy chiều rộng thực của toàn bộ list
     const totalWidth = techItems.scrollWidth;
     const containerWidth = container.offsetWidth;
-    const maxScroll = totalWidth - containerWidth;
-    const step = containerWidth * 0.9; // Mỗi lần di chuyển 90% container width
+    const maxScroll = (totalWidth - containerWidth);
+    const step = containerWidth * 1; // Mỗi lần di chuyển 100% container width
     
     let newPosition = techScrollStates[index].currentPosition + step;
     
@@ -191,17 +191,40 @@ nextTechBtns.forEach((nextBtn, index) => {
     // Chỉ di chuyển nếu có thể di chuyển
     if (newPosition > techScrollStates[index].currentPosition) {
       techScrollStates[index].currentPosition = newPosition;
-      techItems.style.transform = `translateX(-${newPosition}px)`;
+      techItems.style.transform = `translateX(-${newPosition+5}px)`;
       console.log(`Project ${index + 3}: Moved ${newPosition}px (${((newPosition/totalWidth)*100).toFixed(1)}%)`);
     }
   });
 });
 
 prevTechBtns.forEach((prevBtn, index) => {
-  const techItems = prevBtn.closest('.main_projects-content-detail-description-techs').querySelector(".long-list");
+  const techContainer = prevBtn.closest('.main_projects-content-detail-description-techs');
+  const techItems = techContainer.querySelector(".long-list");
+  const container = techContainer.querySelector('.long-list-container');
   
   prevBtn.addEventListener("click", () => {
-    techItems.style.transform = "translateX(0)";
+    const containerWidth = container.offsetWidth;
+    const step = containerWidth * 1; // Mỗi lần di chuyển 100% container width (giống next)
+    
+    let newPosition = techScrollStates[index].currentPosition - step;
+    
+    // Đảm bảo không nhỏ hơn 0
+    if (newPosition < 0) {
+      newPosition = 0;
+    }
+    
+    // Chỉ di chuyển nếu có thể di chuyển
+    if (newPosition < techScrollStates[index].currentPosition) {
+      techScrollStates[index].currentPosition = newPosition;
+      
+      if (newPosition === 0) {
+        techItems.style.transform = "translateX(0)";
+        console.log(`Project ${index + 3}: Reset to start`);
+      } else {
+        techItems.style.transform = `translateX(-${newPosition}px)`;
+        console.log(`Project ${index + 3}: Moved back to ${newPosition}px`);
+      }
+    }
   });
 });
 

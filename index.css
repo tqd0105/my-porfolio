@@ -1178,6 +1178,11 @@ main {
   border-radius: 10px;
 }
 
+.divide-highlight{
+  color: #ff0000;
+  font-weight: 700;
+}
+
 .long-list-container {
   width: 395px;
   overflow: hidden;
