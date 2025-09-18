@@ -158,16 +158,51 @@ window.addEventListener("scroll", () => {
 });
 
 // Hiển thị các công nghệ sử dụng bằng next và prev
-const nextTechBtn = document.getElementById("next-tech");
-const prevTechBtn = document.getElementById("prev-tech");
-const techItems = document.querySelector(".long-list");
+const nextTechBtns = document.querySelectorAll(".next-tech");
+const prevTechBtns = document.querySelectorAll(".prev-tech");
 
-nextTechBtn.addEventListener("click", () => {
-  techItems.style.transform = "translateX(-90%)";
-})
+// Object để lưu trạng thái scroll của từng project
+const techScrollStates = {};
 
-prevTechBtn.addEventListener("click", () => {
-  techItems.style.transform = "translateX(0)";
+nextTechBtns.forEach((nextBtn, index) => {
+  const techContainer = nextBtn.closest('.main_projects-content-detail-description-techs');
+  const techItems = techContainer.querySelector(".long-list");
+  const container = techContainer.querySelector('.long-list-container');
+  
+  // Khởi tạo state cho project này
+  if (!techScrollStates[index]) {
+    techScrollStates[index] = { currentPosition: 0 };
+  }
+
+  nextBtn.addEventListener("click", () => {
+    // Sử dụng scrollWidth để lấy chiều rộng thực của toàn bộ list
+    const totalWidth = techItems.scrollWidth;
+    const containerWidth = container.offsetWidth;
+    const maxScroll = totalWidth - containerWidth;
+    const step = containerWidth * 0.9; // Mỗi lần di chuyển 90% container width
+    
+    let newPosition = techScrollStates[index].currentPosition + step;
+    
+    // Đảm bảo không vượt quá giới hạn
+    if (newPosition > maxScroll) {
+      newPosition = maxScroll;
+    }
+    
+    // Chỉ di chuyển nếu có thể di chuyển
+    if (newPosition > techScrollStates[index].currentPosition) {
+      techScrollStates[index].currentPosition = newPosition;
+      techItems.style.transform = `translateX(-${newPosition}px)`;
+      console.log(`Project ${index + 3}: Moved ${newPosition}px (${((newPosition/totalWidth)*100).toFixed(1)}%)`);
+    }
+  });
+});
+
+prevTechBtns.forEach((prevBtn, index) => {
+  const techItems = prevBtn.closest('.main_projects-content-detail-description-techs').querySelector(".long-list");
+  
+  prevBtn.addEventListener("click", () => {
+    techItems.style.transform = "translateX(0)";
+  });
 });
 
 // Gửi tin nhắn ở contact

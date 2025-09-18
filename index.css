@@ -979,7 +979,7 @@ main {
 .main_projects-content-detail-title h1 {
   font-family: "Saira Stencil One", "Black Ops One", sans-serif;
   font-size: 8rem;
-  /* height: 120px; */
+  height: 135px;  
 }
 
 .main_projects-content-detail-title-text {
@@ -1152,7 +1152,7 @@ main {
   padding: 0.6rem 0.8rem;
   border-radius: 4rem;
   font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .main_projects-content-detail-link-open-items.live-demo {
@@ -1161,7 +1161,7 @@ main {
 }
 
 .main_projects-content-detail-link-open-items.source-code {
-  background-image: linear-gradient(to top, #c35ee1 0%, #ee5f80 100%);
+  background-image: linear-gradient(-225deg, #c35ee1 0%, #ea5f7f 100%);
   color: rgb(255, 255, 255);
 }
 
@@ -1200,7 +1200,7 @@ main {
   border-radius: 50%;
 }
 
-#next-tech {
+.next-tech {
   position: absolute;
   right: 55px;
   top: 65%;
@@ -1210,7 +1210,7 @@ main {
   box-shadow: 0px 0px 25px 5px rgb(164, 164, 164);
 }
 
-#prev-tech {
+.prev-tech {
   position: absolute;
   left: 55px;
   top: 65%;
