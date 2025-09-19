@@ -743,7 +743,7 @@ main {
 .main_skills-content-left {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1.6rem;
   background-image: linear-gradient(to top, rgb(255, 240, 128), rgb(231 185 255));
   padding: 1.5rem;
   border-radius: 2rem;
@@ -784,7 +784,7 @@ main {
 .main_skills-content-left-intro {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.4rem;
 }
 
 .main_skills-content-left-button {
@@ -796,7 +796,7 @@ main {
 }
 
 .main_skills-content-left-button button {
-  padding: 1rem;
+  padding: 1.4rem;
   border-radius: 2rem;
   border: none;
   width: 100%;
@@ -820,7 +820,7 @@ main {
 .main_skills-content-right-item-heading {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 2rem;
 }
 
 .main_skills-content-right {
@@ -884,7 +884,6 @@ main {
 .main_skills-content-right-item-img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  /* grid-template-columns: repeat(3, 1fr); */
   justify-items: center; /* căn giữa từng ảnh trong cột */
   align-items: center;
   width: 80%;
@@ -910,7 +909,7 @@ main {
 }
 
 .main_skills-content-right-item-img-detail span {
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   font-size: 1.2rem;
   /* color: rgb(0, 68, 255); */
