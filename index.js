@@ -247,7 +247,7 @@ document.getElementById("shareBtn").addEventListener("click", async () => {
     try {
       await navigator.share({
         title: document.title,
-        text: "For the best experience, access my portfolio on a laptop.",
+        text: "For the best experience, please view on laptop.",
         url: location.href
       });
     } catch (err) {
