@@ -63,6 +63,8 @@
     />
   </head>
   <body>
+    <div>
+    <div>
     <!-- Thanh điều hướng -->
     <nav class="navbar">
       <a class="navbar__logo" href="#">
@@ -1126,9 +1128,31 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
     <div class="scrollToTop" id="scroll_to_top">
       <img src="./icons/up.png" width="60" alt="" />
     </div>
+</div>
+    <!-- Modal Warning for Tablet, Phone -->
+    <div class="modal-warning-overlay">
+      <div class="modal-warning" id="modalWarning">
+        <div class="modal-warning-header">
+          <img src="./icons/warning.png" width="100" alt="" />
+          <p>Unsupported Device</p>
+        </div>
+        <p class="modal-warning-content">
+          For the best experience, please use a laptop. Responsive design for
+          smaller devices is under development.
+        </p>
+        <div class="modal-warning-buttons">
+          <button class="modal-warning-share" id="shareBtn">Share link</button>
+          <button class="modal-warning-close" id="closeModal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <script
       type="module"
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"

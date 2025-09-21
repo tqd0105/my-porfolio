@@ -241,3 +241,25 @@ sendBtn.addEventListener("click", (e) => {
     sendBtn.style.display = "block";
   }, 2000);
 })
+
+document.getElementById("shareBtn").addEventListener("click", async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: "Share link to access my portfolio!",
+        url: location.href
+      });
+    } catch (err) {
+      console.log("Share canceled");
+    }
+  } else {
+    // fallback mở Facebook
+    const url = encodeURIComponent(location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+  }
+});
+
+document.getElementById("closeModal").addEventListener("click", () => {
+  window.close();
+});
