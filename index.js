@@ -247,7 +247,7 @@ document.getElementById("shareBtn").addEventListener("click", async () => {
     try {
       await navigator.share({
         title: document.title,
-        text: "Share link to access my portfolio!",
+        text: "For the best experience, access my portfolio on a laptop.",
         url: location.href
       });
     } catch (err) {
@@ -258,8 +258,4 @@ document.getElementById("shareBtn").addEventListener("click", async () => {
     const url = encodeURIComponent(location.href);
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
   }
-});
-
-document.getElementById("closeModal").addEventListener("click", () => {
-  window.close();
 });
