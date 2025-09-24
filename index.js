@@ -132,7 +132,6 @@ const navLinks = document.querySelectorAll(".navbar__menu-item");
 
 window.addEventListener("scroll", () => {
   let current = null;
-  console.log(window.pageYOffset);
   
   // Nếu đang ở đầu trang (ví dụ < 100px), coi là "home"
   if (window.pageYOffset < 1600) {
