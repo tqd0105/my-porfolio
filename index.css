@@ -182,13 +182,14 @@ body.dark-theme {
 .navbar__menu-item {
   font-weight: bold;
   padding: 1rem;
-  width: 100px;
+  width: 130px;
   text-align: center;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   color: white;
   transition: all 0.5s ease-in-out;
+  white-space: nowrap;
 }
 
 .navbar__menu-list a {
@@ -494,7 +495,7 @@ main {
   /* border: 1px solid #000000; */
   border-radius: 3rem;
   padding: 0.6rem 0;
-  width: 190px;
+  width: 210px;
   text-align: center;
 }
 

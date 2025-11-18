@@ -64,19 +64,63 @@ navbarItems.forEach((item) => {
   });
 });
 
-// Ngôn ngữ
+// ===================== NGÔN NGỮ =====================
 const vieLang = document.getElementById("vie-language");
 const usaLang = document.getElementById("usa-language");
 
-vieLang.addEventListener("click", () => {
-  vieLang.classList.add("hidden");
-  usaLang.classList.remove("hidden");
-});
+async function setLanguage(lang) {
+  try {
+    const res = await fetch(`./lang/${lang}.json`);
+    const translations = await res.json();
 
-usaLang.addEventListener("click", () => {
-  usaLang.classList.add("hidden");
-  vieLang.classList.remove("hidden");
-});
+    // 1️⃣ Dịch text trong thẻ
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[key]) el.textContent = translations[key];
+    });
+
+    // 2️⃣ Dịch placeholder
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (translations[key]) el.placeholder = translations[key];
+    });
+
+    // 3️⃣ Dịch title (nếu có)
+    document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-title");
+      if (translations[key]) el.title = translations[key];
+    });
+
+    // 4️⃣ Dịch alt ảnh (nếu có)
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-alt");
+      if (translations[key]) el.alt = translations[key];
+    });
+
+    // 5️⃣ Lưu ngôn ngữ hiện tại
+    localStorage.setItem("lang", lang);
+
+    // 6️⃣ Hiển thị cờ tương ứng
+    if (lang === "vi") {
+      vieLang.classList.remove("hidden");
+      usaLang.classList.add("hidden");
+    } else {
+      vieLang.classList.add("hidden");
+      usaLang.classList.remove("hidden");
+    }
+  } catch (err) {
+    console.error("Không thể tải file ngôn ngữ:", err);
+  }
+}
+
+// Sự kiện click đổi cờ
+usaLang.addEventListener("click", () => setLanguage("vi"));
+vieLang.addEventListener("click", () => setLanguage("en"));
+
+// Tự động khôi phục ngôn ngữ đã lưu
+const savedLang = localStorage.getItem("lang") || "en";
+setLanguage(savedLang);
+
 
 // Giao diện sáng / tối
 const lightMode = document.getElementById("light-mode");

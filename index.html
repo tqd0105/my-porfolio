@@ -81,12 +81,12 @@
           <div class="box-animation"></div>
         </a>
         <div class="navbar__menu-list">
-          <a href="#" class="navbar__menu-item activeNavbar">Home</a>
-          <a href="#hobby" class="navbar__menu-item">Hobby</a>
-          <a href="#career" class="navbar__menu-item">Career</a>
-          <a href="#skills" class="navbar__menu-item">Skill</a>
-          <a href="#projects" class="navbar__menu-item">Project</a>
-          <a href="#contact" class="navbar__menu-item">Contact</a>
+          <a href="#" class="navbar__menu-item activeNavbar" data-i18n="navbar.home">Home</a>
+          <a href="#hobby" class="navbar__menu-item" data-i18n="navbar.hobby">Hobby</a>
+          <a href="#career" class="navbar__menu-item" data-i18n="navbar.career">Career</a>
+          <a href="#skills" class="navbar__menu-item" data-i18n="navbar.skills">Skill</a>
+          <a href="#projects" class="navbar__menu-item" data-i18n="navbar.projects">Project</a>
+          <a href="#contact" class="navbar__menu-item" data-i18n="navbar.contact">Contact</a>
         </div>
 
         <div class="navbar_right">
@@ -119,7 +119,7 @@
           </div>
           <div class="navbar__search">
             <img src="./icons/search.png" width="30" height="30" alt="" />
-            <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="Search..." data-i18n-placeholder="navbar.search.placeholder" />
           </div>
         </div>
       </nav>
@@ -128,12 +128,12 @@
         <div class="header__banner">
           <div class="header__banner-text">
             <div>
-              <h3 class="header__banner-text-title">
+              <h3 class="header__banner-text-title" data-i18n="header.greeting">
                 Hi, I'm Dũng
                 <br />
                 A web developer.
               </h3>
-              <p class="header__banner-text-subtitle">
+              <p class="header__banner-text-subtitle" data-i18n="header.subtitle">
                 A passionate programmer dedicated to building modern,
                 user-friendly, and impactful applications that improve everyday
                 life.
@@ -142,7 +142,7 @@
             <div class="header__banner-button">
               <a class="header__banner-button-more" href="#infor">
                 <img src="./icons/more.png" width="30" height="30" alt="" />
-                <span>See more</span>
+                <span data-i18n="header.button.seemore">See more</span>
               </a>
               <a
                 class="header__banner-button-downloadcv"
@@ -150,7 +150,7 @@
                 download
               >
                 <img src="./icons/download.png" width="30" height="30" alt="" />
-                <span>Download CV</span>
+                <span data-i18n="header.button.downloadcv">Download CV</span>
               </a>
             </div>
           </div>
@@ -186,35 +186,35 @@
               <img src="./images/logo.png" width="250" alt="" />
             </div>
             <div class="main_infor-content-text">
-              <h2>PERSONAL INFORMATION</h2>
+              <h2 data-i18n="about.title">PERSONAL INFORMATION</h2>
               <div class="main_infor-content-text-list">
                 <div class="main_infor-content-text-item">
-                  <span>Fullname</span>
+                  <span data-i18n="about.fullname">Fullname</span>
                   <p>Trần Quang Dũng</p>
                 </div>
                 <div class="main_infor-content-text-item">
-                  <span>Birthday</span>
+                  <span data-i18n="about.birthday">Birthday</span>
                   <p>01/11/2005</p>
                 </div>
 
                 <div class="main_infor-content-text-item">
-                  <span>Phone</span>
+                  <span data-i18n="about.phone">Phone</span>
                   <p>0779461536</p>
                 </div>
                 <div class="main_infor-content-text-item">
-                  <span>Email</span>
+                  <span data-i18n="about.email">Email</span>
                   <p>tqd0105@gmail.com</p>
                 </div>
                 <div class="main_infor-content-text-item">
-                  <span>Hometown</span>
+                  <span data-i18n="about.hometown">Hometown</span>
                   <p>Binh Son, Quang Ngai</p>
                 </div>
                 <div class="main_infor-content-text-item">
-                  <span>Address</span>
+                  <span data-i18n="about.address">Address</span>
                   <p>Thu Duc, TP.HCM, Vietnam</p>
                 </div>
                 <div class="main_infor-content-text-item">
-                  <span>Education</span>
+                  <span data-i18n="about.education">Education</span>
                   <p>University of Transport Ho Chi Minh City</p>
                 </div>
               </div>
@@ -232,7 +232,7 @@
                   autoplay
                   loop
                 ></dotlottie-wc>
-                <h2>FAVORITE ACTIVITIES</h2>
+                <h2 data-i18n="hobby.title">FAVORITE ACTIVITIES</h2>
               </div>
               <div class="main_hobby-content-list">
                 <figure>
@@ -242,7 +242,7 @@
                     class="main_hobby-content-list-img"
                     alt="soccer"
                   />
-                  <figcaption>Play Soccer</figcaption>
+                  <figcaption data-i18n="hobby.soccer">Play Soccer</figcaption>
                 </figure>
                 <figure>
                   <img
@@ -251,7 +251,7 @@
                     class="main_hobby-content-list-img"
                     alt="music"
                   />
-                  <figcaption>Listen To Music</figcaption>
+                  <figcaption data-i18n="hobby.music">Listen To Music</figcaption>
                 </figure>
                 <figure>
                   <img
@@ -260,7 +260,7 @@
                     class="main_hobby-content-list-img"
                     alt="game"
                   />
-                  <figcaption>Play Game</figcaption>
+                  <figcaption data-i18n="hobby.game">Play Game</figcaption>
                 </figure>
                 <figure>
                   <img
@@ -269,7 +269,7 @@
                     class="main_hobby-content-list-img"
                     alt="cooking"
                   />
-                  <figcaption>Cooking</figcaption>
+                  <figcaption data-i18n="hobby.cooking">Cooking</figcaption>
                 </figure>
               </div>
             </div>
@@ -287,27 +287,27 @@
                 />
               </div>
               <div class="main_career-goal-content-text">
-                <h2>PROFESSIONAL GOALS</h2>
+                <h2 data-i18n="career.title">PROFESSIONAL GOALS</h2>
                 <ul class="main_career-goal-content-list">
-                  <li class="main_career-goal-content-list-item">
+                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.1">
                     Develop strong UI/UX design thinking to optimize user
                     experience
                   </li>
-                  <li class="main_career-goal-content-list-item">
+                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.2">
                     Master essential Frontend technologies such as ReactJS,
                     NextJS, TailwindCSS, and TypeScript.
                   </li>
-                  <li class="main_career-goal-content-list-item">
+                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.3">
                     Enhance clean code practices, implement testing (Unit Test,
                     E2E), and improve version control with Git in real-world
                     frontend projects.
                   </li>
-                  <li class="main_career-goal-content-list-item">
+                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.4">
                     Strengthen key soft skills including communication,
                     teamwork, and problem-solving in fast-paced, collaborative
                     work environments.
                   </li>
-                  <li class="main_career-goal-content-list-item">
+                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.5">
                     Become a Frontend Engineer capable of contributing to
                     complex frontend systems and actively mentoring other
                     newbies.
@@ -322,7 +322,7 @@
           <div class="main_skills-content">
             <div class="main_skills-content-left">
               <div class="main_skills-content-left-intro">
-                <h2>KEY SKILLS & STRENGTHS</h2>
+                <h2 data-i18n="skills.title">KEY SKILLS & STRENGTHS</h2>
                 <div
                   style="
                     display: flex;
@@ -337,23 +337,23 @@
                     height="30"
                     alt=""
                   />
-                  <p>
+                  <p data-i18n="skills.text" >
                     I combine tech proficiency with soft skills to drive team
                     project success.
                   </p>
                 </div>
               </div>
               <div class="main_skills-content-left-button">
-                <button onclick="showSkills('skill-frontend')" class="choosen">
+                <button onclick="showSkills('skill-frontend')" class="choosen" data-i18n="skills.frontend">
                   Front-End Skills
                 </button>
-                <button onclick="showSkills('skill-backend')">
+                <button onclick="showSkills('skill-backend')" data-i18n="skills.backend">
                   Back-End Skills
                 </button>
-                <button onclick="showSkills('skill-language')">
+                <button onclick="showSkills('skill-language')" data-i18n="skills.language">
                   Foreign Language
                 </button>
-                <button onclick="showSkills('skill-tools')">
+                <button onclick="showSkills('skill-tools')" data-i18n="skills.tools">
                   Tools & Technologies
                 </button>
                 <!-- <button onclick="showSkills('skill-soft')">Soft Skills</button> -->
@@ -367,9 +367,9 @@
                 <div class="main_skills-content-right-item-heading">
                   <div class="main_skills-content-right-item-heading-title">
                     <img src="./icons/frontend.png" width="50" alt="" />
-                    <h3>FRONT-END SKILLS</h3>
+                    <h3 data-i18n="skills.frontend">FRONT-END SKILLS</h3>
                   </div>
-                  <p>
+                  <p data-i18n="skills.frontend.text">
                     Involves building user interfaces and experiences, requiring
                     a blend of precision and creativity to deliver intuitive
                     designs.
@@ -392,9 +392,9 @@
                 <div class="main_skills-content-right-item-heading">
                   <div class="main_skills-content-right-item-heading-title">
                     <img src="./icons/backend.png" width="50" alt="" />
-                    <h3>BACK-END SKILLS</h3>
+                    <h3 data-i18n="skills.backend">BACK-END SKILLS</h3>
                   </div>
-                  <p>
+                  <p data-i18n="skills.backend.text">
                     Experienced in developing server-side applications and
                     efficiently managing databases to ensure stable and scalable
                     web solutions.
@@ -414,9 +414,9 @@
                 <div class="main_skills-content-right-item-heading">
                   <div class="main_skills-content-right-item-heading-title">
                     <img src="./icons/language.png" width="50" alt="" />
-                    <h3>FOREIGN LANGUAGE</h3>
+                    <h3 data-i18n="skills.language">FOREIGN LANGUAGE</h3>
                   </div>
-                  <p>
+                  <p data-i18n="skills.language.text">
                     Foreign languages play an essential role in learning and
                     adopting global technologies, opening up more opportunities.
                   </p>
@@ -458,9 +458,9 @@
                 <div class="main_skills-content-right-item-heading">
                   <div class="main_skills-content-right-item-heading-title">
                     <img src="./icons/tool.png" width="50" alt="" />
-                    <h3>TOOLS & TECHS</h3>
+                    <h3 data-i18n="skills.tools">TOOLS & TECHS</h3>
                   </div>
-                  <p>
+                  <p data-i18n="skills.tools.text">
                     Proficient in utilizing various tools and technologies to
                     enhance work efficiency, productivity, and collaboration in
                     the development.
@@ -531,7 +531,7 @@
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
-                <p>
+                <p data-i18n="projects.1.desc">
                   SoundCloud is one of my favorite websites because it allows
                   users to stream music online and, more importantly, to create
                   and share their own tracks. That’s why I decided to recreate
@@ -539,7 +539,7 @@
                   foundations of web development.
                 </p>
                 <div class="main_projects-content-detail-description-features">
-                  <h4>📌 Highlights</h4>
+                  <h4 data-i18n="projects.highlights">📌 Highlights</h4>
                   <div
                     class="main_projects-content-detail-description-features-description"
                   >
@@ -548,7 +548,7 @@
                 </div>
                 <!-- Mô tả dự án -->
                 <div class="main_projects-content-detail-description-techs">
-                  <h4>🧑‍💻 Technologies</h4>
+                  <h4 data-i18n="projects.technologies">🧑‍💻 Technologies</h4>
                   <div
                     class="main_projects-content-detail-description-techs-list"
                   >
@@ -569,14 +569,14 @@
                     class="main_projects-content-detail-link-open-items live-demo"
                   >
                     <img src="./icons/link.png" width="30" alt="" />
-                    <span>Live Demo</span>
+                    <span data-i18n="projects.button.live-demo">Live Demo</span>
                   </a>
                   <a
                     target="_blank"
                     href="https://github.com/tqd0105/SoundCloudInterface"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span>Source Code</span>
+                    <span data-i18n="projects.button.source-code">Source Code</span>
                   </a>
                 </div>
               </div>
@@ -593,11 +593,11 @@
                 <h1>2</h1>
                 <div class="main_projects-content-detail-title-text">
                   <h2 style="color: #cb6ce6">BraveSale</h2>
-                  <span>Front-End Developer</span>
+                  <span >Front-End Developer</span>
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
-                <p>
+                <p data-i18n="projects.2.desc">
                   BraveSale E-Commerce Website is a mock e-commerce website that
                   lets users browse, search, and purchase products online with
                   features like a shopping cart, account management, and
@@ -605,7 +605,7 @@
                   experience.
                 </p>
                 <div class="main_projects-content-detail-description-features">
-                  <h4>📌 Highlights</h4>
+                  <h4 data-i18n="projects.highlights">📌 Highlights</h4>
                   <div
                     class="main_projects-content-detail-description-features-description"
                   >
@@ -614,7 +614,7 @@
                 </div>
                 <!-- Mô tả dự án -->
                 <div class="main_projects-content-detail-description-techs">
-                  <h4>🧑‍💻 Technologies</h4>
+                  <h4 data-i18n="projects.technologies">🧑‍💻 Technologies</h4>
                   <div
                     class="main_projects-content-detail-description-techs-list"
                   >
@@ -635,14 +635,14 @@
                     class="main_projects-content-detail-link-open-items live-demo"
                   >
                     <img src="./icons/link.png" width="30" alt="" />
-                    <span>Live Demo</span>
+                    <span data-i18n="projects.button.live-demo">Live Demo</span>
                   </a>
                   <a
                     target="_blank"
                     href="https://github.com/tqd0105/BraveSale-OnlineCommerce"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span>Source Code</span>
+                    <span data-i18n="projects.button.source-code">Source Code</span>
                   </a>
                 </div>
               </div>
@@ -660,11 +660,11 @@
                 <h1>3</h1>
                 <div class="main_projects-content-detail-title-text">
                   <h2 style="color: #0194ff">SpaceZone</h2>
-                  <span>Full-Stack Developer</span>
+                  <span >Full-Stack Developer</span>
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
-                <p>
+                <p data-i18n="projects.3.desc">
                   SpaceZone is a social networking website inspired by Facebook
                   and Instagram. It simulates the core features of social media
                   to help me understand how social media works in real life. The
@@ -675,7 +675,7 @@
                   class="main_projects-content-detail-description-features"
                   style="margin-bottom: 7rem"
                 >
-                  <h4>📌 Highlights</h4>
+                  <h4 data-i18n="projects.highlights">📌 Highlights</h4>
                   <div
                     class="main_projects-content-detail-description-features-description"
                   >
@@ -744,14 +744,14 @@
                     class="main_projects-content-detail-link-open-items live-demo"
                   >
                     <img src="./icons/link.png" width="30" alt="" />
-                    <span>Live Demo</span>
+                    <span data-i18n="projects.button.live-demo">Live Demo</span>
                   </a>
                   <a
                     target="_blank"
                     href="https://github.com/tqd0105/SpaceZone---Social-Media"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span>Source Code</span>
+                    <span data-i18n="projects.button.source-code">Source Code</span>
                   </a>
                 </div>
               </div>
@@ -773,7 +773,7 @@
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
-                <p>
+                <p data-i18n="projects.4.desc">
                   LightBrave is a modern student management system with smart
                   attendance tracking via QR codes. The system supports secure
                   login, access authorization, and classroom management. The
@@ -784,7 +784,7 @@
                   class="main_projects-content-detail-description-features"
                   style="margin-bottom: 7rem"
                 >
-                  <h4>📌 Highlights</h4>
+                  <h4 data-i18n="projects.highlights">📌 Highlights</h4>
                   <div
                     class="main_projects-content-detail-description-features-description"
                   >
@@ -850,14 +850,14 @@
                     class="main_projects-content-detail-link-open-items live-demo"
                   >
                     <img src="./icons/link.png" width="30" alt="" />
-                    <span>Live Demo</span>
+                    <span data-i18n="projects.button.live-demo">Live Demo</span>
                   </a>
                   <a
                     target="_blank"
                     href="https://github.com/tqd0105/student-management-system"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span>Source Code</span>
+                    <span data-i18n="projects.button.source-code">Source Code</span>
                   </a>
                 </div>
               </div>
@@ -879,7 +879,7 @@
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
-                <p>
+                <p data-i18n="projects.5.desc">
                   FlowersGiftNow is an trending online platform for fresh
                   flowers and gifts, offering a modern responsive interface that
                   makes browsing, ordering, and tracking effortless while
@@ -890,7 +890,7 @@
                   class="main_projects-content-detail-description-features"
                   style="margin-bottom: 7rem"
                 >
-                  <h4>📌 Highlights</h4>
+                  <h4 data-i18n="projects.highlights">📌 Highlights</h4>
                   <div
                     class="main_projects-content-detail-description-features-description"
                   >
@@ -949,14 +949,14 @@
                     class="main_projects-content-detail-link-open-items live-demo"
                   >
                     <img src="./icons/link.png" width="30" alt="" />
-                    <span>Live Demo</span>
+                    <span data-i18n="projects.button.live-demo">Live Demo</span>
                   </a>
                   <a
                     target="_blank"
                     href="https://github.com/tqd-tech/LTW_FlowersGiftNow_Group6"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span>Source Code</span>
+                    <span data-i18n="projects.button.source-code">Source Code</span>
                   </a>
                 </div>
               </div>
@@ -970,31 +970,31 @@
         </section>
         <section class="main_contact" id="contact">
           <div class="main_contact-content">
-            <h3>CONTACT NOW!</h3>
+            <h3 data-i18n="contact.title">CONTACT NOW!</h3>
             <div class="main_contact-content-wrapper">
               <div class="main_contact-content-form">
                 <div class="main_contact-content-form-input">
                   <div class="main_contact-content-form-input-name">
-                    <input type="text" placeholder="Firstname" />
-                    <input type="text" placeholder="Lastname" />
+                    <input type="text" placeholder="Firstname" data-i18n-placeholder="contact.name.first" />
+                    <input type="text" placeholder="Lastname" data-i18n-placeholder="contact.name.last" />
                   </div>
                   <div class="main_contact-content-form-input-email">
-                    <input type="email" placeholder="Email address" />
-                    <input type="number" placeholder="Phone number" />
+                    <input type="email" placeholder="Email address" data-i18n-placeholder="contact.email" />
+                    <input type="number" placeholder="Phone number" data-i18n-placeholder="contact.phone" />
                   </div>
                   <div class="main_contact-content-form-input-address">
-                    <input type="text" placeholder="Type your address here." />
+                    <input type="text" placeholder="Type your address here." data-i18n-placeholder="contact.address" />
                   </div>
                   <div class="main_contact-content-form-input-message">
-                    <textarea placeholder="Type your message here."></textarea>
+                    <textarea placeholder="Type your message here." data-i18n-placeholder="contact.message"></textarea>
                   </div>
                 </div>
                 <button id="send">
-                  <span>Send message</span>
+                  <span data-i18n="contact.button">Send message</span>
                 </button>
                 <button class="main_contact-content-form-input-success">
                   <img src="./icons/check.png" width="25" alt="" />
-                  <span>Đã gửi thành công</span>
+                  <span data-i18n="contact.button.success">Success</span>
                 </button>
               </div>
               <div class="main_contact-content-infor">
@@ -1015,7 +1015,7 @@
                 >
                   <img src="./icons/phone.png" width="45" alt="" />
                   <div class="main_contact-content-infor-title-text">
-                    <span>Phone</span>
+                    <span data-i18n="contact.phone">Phone</span>
                     <span>0779461536</span>
                   </div>
                 </a>
@@ -1060,9 +1060,9 @@
       </main>
       <footer>
         <div class="footer__top">
-          <h3>THANK YOU!</h3>
+          <h3 data-i18n="footer.thank">THANK YOU!</h3>
           <div class="footer__top-text">
-            <p>View all</p>
+            <p data-i18n="footer.view-all">View all</p>
             <img src="./icons/nextcolorful.png" width="50" alt="" />
           </div>
         </div>
@@ -1080,7 +1080,7 @@
                 <span>Frontend Developer</span>
               </div>
             </a>
-            <p class="footer__left-description">
+            <p class="footer__left-description" data-i18n="footer.description">
               A small corner where I share my information, skills, future goals,
               and highlight projects throughout my journey in programming.
             </p>
@@ -1123,26 +1123,26 @@
             </div>
           </div>
           <div class="footer__center">
-            <h3>Other</h3>
+            <h3 data-i18n="footer.other">Other</h3>
             <div class="footer__center-links">
-              <a href="#"> My stories </a>
-              <a href="#"> Experiences </a>
-              <a href="#"> Team </a>
-              <a href="#"> Blog </a>
+              <a href="#" data-i18n="footer.my-stories"> My stories </a>
+              <a href="#" data-i18n="footer.experiences"> Experiences </a>
+              <a href="#" data-i18n="footer.team"> Team </a>
+              <a href="#" data-i18n="footer.blog"> Blog </a>
             </div>
           </div>
           <div class="footer__right">
-            <h3>Tags</h3>
+            <h3 data-i18n="footer.tags">Tags</h3>
             <div class="footer__right-tags">
-              <a href="#"> #HTML </a>
-              <a href="#"> #CSS </a>
-              <a href="#"> #SCSS </a>
-              <a href="#"> #TailwindCSS </a>
-              <a href="#"> #TypeScript </a>
-              <a href="#"> #NextJS </a>
-              <a href="#"> #NodeJS </a>
-              <a href="#"> #ExpressJS </a>
-              <a href="#"> #MongoDB </a>
+              <a href="#" data-i18n="footer.html"> #HTML </a>
+              <a href="#" data-i18n="footer.css"> #CSS </a>
+              <a href="#" data-i18n="footer.scss"> #SCSS </a>
+              <a href="#" data-i18n="footer.tailwindcss"> #TailwindCSS </a>
+              <a href="#" data-i18n="footer.typescript"> #TypeScript </a>
+              <a href="#" data-i18n="footer.nextjs"> #NextJS </a>
+              <a href="#" data-i18n="footer.nodejs"> #NodeJS </a>
+              <a href="#" data-i18n="footer.expressjs"> #ExpressJS </a>
+              <a href="#" data-i18n="footer.mongodb"> #MongoDB </a>
             </div>
           </div>
         </div>
