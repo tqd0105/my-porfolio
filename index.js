@@ -125,17 +125,21 @@ setLanguage(savedLang);
 // Giao diện sáng / tối
 const lightMode = document.getElementById("light-mode");
 const darkMode = document.getElementById("dark-mode");
+const modalDownloadCV = document.querySelector(".modal-downloadcv")
+
 
 lightMode.addEventListener("click", () => {
   lightMode.classList.add("hidden");
   darkMode.classList.remove("hidden");
   document.body.classList.add("dark-theme");
+  modalDownloadCV.classList.add("dark-theme");
 });
 
 darkMode.addEventListener("click", () => {
   darkMode.classList.add("hidden");
   lightMode.classList.remove("hidden");
   document.body.classList.remove("dark-theme");
+  modalDownloadCV.classList.remove("dark-theme");
 });
 
 /* Chuyển tiếp slide trong dự án */
@@ -302,3 +306,24 @@ document.getElementById("shareBtn").addEventListener("click", async () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
   }
 });
+
+// Modal DownloadCV
+const downloadcvButton = document.querySelector(".header__banner-button-downloadcv")
+const modalDownloadCVOverlay = document.querySelector(".modal-downloadcv-overlay")
+const modalDownloadCVClose = document.querySelector(".modal-downloadcv-close")
+
+downloadcvButton.addEventListener('click', ()=> {
+  modalDownloadCV.classList.remove("hidden");
+  modalDownloadCVOverlay.classList.remove("hidden");
+  // document.body.style.overflow = "hidden";
+})
+
+modalDownloadCVClose.addEventListener("click", ()=> {
+  modalDownloadCV.classList.add("hidden");
+  modalDownloadCVOverlay.classList.add("hidden");
+})
+
+modalDownloadCVOverlay.addEventListener("click", ()=> {
+  modalDownloadCV.classList.add("hidden");
+  modalDownloadCVOverlay.classList.add("hidden");
+})

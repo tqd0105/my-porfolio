@@ -79,5 +79,8 @@
   "footer.team": "Đội ngũ",
   "footer.blog": "Blog",
   "footer.tags": "Thẻ",
-  "footer.html": "#HTML"
+  "footer.html": "#HTML",
+
+  "modal.downloadcv": "Xác nhận lựa chọn",
+  "modal.downloadcv.title": "Bạn muốn xem CV của tôi theo ngôn ngữ nào?"
 }

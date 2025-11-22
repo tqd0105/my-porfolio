@@ -78,5 +78,8 @@
   "footer.experiences": "Experiences",
   "footer.team": "Team",
   "footer.blog": "Blog",
-  "footer.tags": "Tags"
+  "footer.tags": "Tags",
+
+  "modal.downloadcv": "Confirm selection",
+  "modal.downloadcv.title": "What language would you like to see my CV in?"
 }

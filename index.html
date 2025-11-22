@@ -146,8 +146,8 @@
               </a>
               <a
                 class="header__banner-button-downloadcv"
-                href="./files/myCV-test.pdf"
-                download
+                
+                
               >
                 <img src="./icons/download.png" width="30" height="30" alt="" />
                 <span data-i18n="header.button.downloadcv">Download CV</span>
@@ -1178,6 +1178,45 @@
         </div>
       </div>
     </div>
+
+    <!-- Download CV Options -->
+    <div class="modal-downloadcv-overlay hidden animated_animate animate__bounceIn " id="dark-mode"></div>
+      <div class="modal-downloadcv hidden relative" id="modalDownloadcv">
+        <div class="modal-downloadcv-header">
+          <img src="./icons/user_confirm.png" width="80" alt="" />
+          <p  data-i18n="modal.downloadcv"></p>
+        </div>
+        <p class="modal-downloadcv-content" data-i18n="modal.downloadcv.title">
+        </p>
+        <div class="modal-downloadcv-buttons">
+          <a
+            class="modal-downloadcv-vie"
+            id="closeModal"
+            href="/files/myCV-test.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <img src="./icons/vn.png" width="40" alt="">
+            <span>Tiếng Việt</span>
+            </a
+          >
+          <a
+            class="modal-downloadcv-en"
+            id="closeModal"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <img src="./icons/en.png" width="40" alt="">
+            <span>English</span>
+            </a
+          >
+        </div>
+        <div class="modal-downloadcv-close">
+        <img src="./icons/close.png" width="40" alt="">
+      </div>
+      </div>
+      
 
     <script
       type="module"
