@@ -9,7 +9,7 @@
   "navbar.search.alt": "Biểu tượng tìm kiếm",
 
   "header.greeting": "Xin chào, tôi là Trần Dũng",
-  "header.subtitle": "Một lập trình viên web đam mê, luôn nỗ lực tạo ra các ứng dụng hiện đại, thân thiện và hiệu quả, mang lại giá trị thực cho người dùng và doanh nghiệp.",
+  "header.subtitle": "Một lập trình viên fullstack thích biến ý tưởng thành các sản phẩm web thực tế, giúp kết nối người dùng và doanh nghiệp.",
   "header.button.downloadcv": "Tải xuống CV",
   "header.button.seemore": "Xem thêm",
 
@@ -25,15 +25,15 @@
 
   "hobby.title": "Sở thích",
   "hobby.soccer": "Chơi bóng đá",
-  "hobby.music": "Nghe nhạc",
-  "hobby.game": "Chơi game",
-  "hobby.cooking": "Nấu ăn",
+  "hobby.coffee": "Cà phê & Làm việc",
+  "hobby.travel": "Du lịch",
+  "hobby.esport": "Tham gia sự kiện Esport",
 
-  "career.title": "Mục tiêu nghề nghiệp",
+  "career.title": "Mục tiêu phát triển",
   "career.goal.1": "Phát triển tư duy thiết kế UI/UX mạnh mẽ để tối ưu trải nghiệm người dùng",
   "career.goal.2": "Làm chủ các công nghệ Frontend cơ bản như ReactJS, NextJS, TailwindCSS, và TypeScript.",
   "career.goal.3": "Nâng cao thói quen viết mã sạch, áp dụng kiểm thử (Unit Test, E2E) và cải thiện kiểm soát phiên bản với Git trong các dự án Frontend thực tế.",
-  "career.goal.4": "Phát triển kỹ năng mềm quan trọng như giao tiếp, làm việc nhóm và giải quyết vấn đề trong môi trường làm việc nhanh chóng và đồng đội.",
+  "career.goal.4": "Rèn luyện các kỹ năng mềm cốt lõi gồm giao tiếp, làm việc nhóm và giải quyết vấn đề, nhằm trở thành một kỹ sư toàn diện có khả năng đóng góp vào sự phát triển lâu dài của doanh nghiệp.",
   "career.goal.5": "Trở thành một Frontend Engineer có khả năng đóng góp vào các hệ thống Frontend phức tạp và hoạt động tích cực trong việc đào tạo các newbie mới.",
 
   "skills.title": "Kỹ năng",

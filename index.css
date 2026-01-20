@@ -96,7 +96,7 @@ body.dark-theme {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   cursor: pointer;
   text-decoration: none;
 }
@@ -181,13 +181,13 @@ body.dark-theme {
 .navbar__menu-list {
   display: flex;
   list-style: none;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .navbar__menu-item {
   font-weight: bold;
   padding: 1rem;
-  width: 130px;
+  width: 120px;
   text-align: center;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
@@ -230,7 +230,7 @@ body.dark-theme {
 
 .navbar_mode {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .hidden {
@@ -899,7 +899,7 @@ main {
 
 .main_skills-content-right-item-img {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   justify-items: center;
   /* căn giữa từng ảnh trong cột */
   align-items: center;

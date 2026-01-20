@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -55,6 +55,10 @@
     <meta name="robots" content="index, follow" />
 
     <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -81,12 +85,33 @@
           <div class="box-animation"></div>
         </a>
         <div class="navbar__menu-list">
-          <a href="#" class="navbar__menu-item activeNavbar" data-i18n="navbar.home">Home</a>
-          <a href="#hobby" class="navbar__menu-item" data-i18n="navbar.hobby">Hobby</a>
-          <a href="#career" class="navbar__menu-item" data-i18n="navbar.career">Career</a>
-          <a href="#skills" class="navbar__menu-item" data-i18n="navbar.skills">Skill</a>
-          <a href="#projects" class="navbar__menu-item" data-i18n="navbar.projects">Project</a>
-          <a href="#contact" class="navbar__menu-item" data-i18n="navbar.contact">Contact</a>
+          <a
+            href="#"
+            class="navbar__menu-item activeNavbar"
+            data-i18n="navbar.home"
+            >Home</a
+          >
+          <a href="#hobby" class="navbar__menu-item" data-i18n="navbar.hobby"
+            >Hobby</a
+          >
+          <a href="#career" class="navbar__menu-item" data-i18n="navbar.career"
+            >Career</a
+          >
+          <a href="#skills" class="navbar__menu-item" data-i18n="navbar.skills"
+            >Skill</a
+          >
+          <a
+            href="#projects"
+            class="navbar__menu-item"
+            data-i18n="navbar.projects"
+            >Project</a
+          >
+          <a
+            href="#contact"
+            class="navbar__menu-item"
+            data-i18n="navbar.contact"
+            >Contact</a
+          >
         </div>
 
         <div class="navbar_right">
@@ -94,23 +119,23 @@
             <div class="navbar_mode-language">
               <img
                 src="./icons/vietnam.png"
-                width="30"
+                width="25"
                 alt=""
                 class="hidden"
                 id="vie-language"
               />
-              <img src="./icons/usa.png" width="30" alt="" id="usa-language" />
+              <img src="./icons/usa.png" width="25" alt="" id="usa-language" />
             </div>
             <div class="navbar_mode-uiColor">
               <img
                 src="./icons/lightmode.png"
-                width="30"
+                width="25"
                 alt=""
                 id="light-mode"
               />
               <img
                 src="./icons/darkmode.png"
-                width="30"
+                width="25"
                 alt=""
                 class="hidden"
                 id="dark-mode"
@@ -119,7 +144,11 @@
           </div>
           <div class="navbar__search">
             <img src="./icons/search.png" width="30" height="30" alt="" />
-            <input type="text" placeholder="Search..." data-i18n-placeholder="navbar.search.placeholder" />
+            <input
+              type="text"
+              placeholder="Search..."
+              data-i18n-placeholder="navbar.search.placeholder"
+            />
           </div>
         </div>
       </nav>
@@ -133,7 +162,10 @@
                 <br />
                 A web developer.
               </h3>
-              <p class="header__banner-text-subtitle" data-i18n="header.subtitle">
+              <p
+                class="header__banner-text-subtitle"
+                data-i18n="header.subtitle"
+              >
                 A passionate programmer dedicated to building modern,
                 user-friendly, and impactful applications that improve everyday
                 life.
@@ -144,11 +176,7 @@
                 <img src="./icons/more.png" width="30" height="30" alt="" />
                 <span data-i18n="header.button.seemore">See more</span>
               </a>
-              <a
-                class="header__banner-button-downloadcv"
-                
-                
-              >
+              <a class="header__banner-button-downloadcv">
                 <img src="./icons/download.png" width="30" height="30" alt="" />
                 <span data-i18n="header.button.downloadcv">Download CV</span>
               </a>
@@ -246,30 +274,48 @@
                 </figure>
                 <figure>
                   <img
-                    src="./images/music.png"
+                    src="./images/coffee.png"
                     width="300"
                     class="main_hobby-content-list-img"
-                    alt="music"
+                    alt="coffee"
                   />
-                  <figcaption data-i18n="hobby.music">Listen To Music</figcaption>
+                  <figcaption data-i18n="hobby.coffee">Coffee Chill</figcaption>
                 </figure>
                 <figure>
-                  <img
-                    src="./images/game.png"
+                  <!-- <img
+                    src="./images/travel.png"
                     width="300"
                     class="main_hobby-content-list-img"
-                    alt="game"
-                  />
-                  <figcaption data-i18n="hobby.game">Play Game</figcaption>
+                    alt="travel"
+                  /> -->
+                  <video
+                    src="./images/travel.mp4"
+                    width="300"
+                    class="main_hobby-content-list-img"
+                    autoplay
+                    loop
+                    muted
+                  ></video>
+                  <figcaption data-i18n="hobby.travel">Travel</figcaption>
                 </figure>
                 <figure>
-                  <img
-                    src="./images/cooking.png"
+                  <!-- <img
+                    src="./images/esport.png"
                     width="300"
                     class="main_hobby-content-list-img"
-                    alt="cooking"
-                  />
-                  <figcaption data-i18n="hobby.cooking">Cooking</figcaption>
+                    alt="esport"
+                  /> -->
+                  <video
+                    src="./images/esport.mp4"
+                    width="300"
+                    class="main_hobby-content-list-img"
+                    autoplay
+                    loop
+                    muted
+                  ></video>
+                  <figcaption data-i18n="hobby.esport">
+                    Join Esport Event
+                  </figcaption>
                 </figure>
               </div>
             </div>
@@ -289,29 +335,41 @@
               <div class="main_career-goal-content-text">
                 <h2 data-i18n="career.title">PROFESSIONAL GOALS</h2>
                 <ul class="main_career-goal-content-list">
-                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.1">
+                  <li
+                    class="main_career-goal-content-list-item"
+                    data-i18n="career.goal.1"
+                  >
                     Develop strong UI/UX design thinking to optimize user
                     experience
                   </li>
-                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.2">
+                  <li
+                    class="main_career-goal-content-list-item"
+                    data-i18n="career.goal.2"
+                  >
                     Master essential Frontend technologies such as ReactJS,
                     NextJS, TailwindCSS, and TypeScript.
                   </li>
-                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.3">
+                  <li
+                    class="main_career-goal-content-list-item"
+                    data-i18n="career.goal.3"
+                  >
                     Enhance clean code practices, implement testing (Unit Test,
                     E2E), and improve version control with Git in real-world
                     frontend projects.
                   </li>
-                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.4">
+                  <li
+                    class="main_career-goal-content-list-item"
+                    data-i18n="career.goal.4"
+                  >
                     Strengthen key soft skills including communication,
-                    teamwork, and problem-solving in fast-paced, collaborative
-                    work environments.
+                    teamwork, and problem-solving, and become a well-rounded
+                    engineer who can grow into a future team lead.
                   </li>
-                  <li class="main_career-goal-content-list-item" data-i18n="career.goal.5">
+                  <!-- <li class="main_career-goal-content-list-item" data-i18n="career.goal.5">
                     Become a Frontend Engineer capable of contributing to
                     complex frontend systems and actively mentoring other
                     newbies.
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -337,23 +395,36 @@
                     height="30"
                     alt=""
                   />
-                  <p data-i18n="skills.text" >
+                  <p data-i18n="skills.text">
                     I combine tech proficiency with soft skills to drive team
                     project success.
                   </p>
                 </div>
               </div>
               <div class="main_skills-content-left-button">
-                <button onclick="showSkills('skill-frontend')" class="choosen" data-i18n="skills.frontend">
+                <button
+                  onclick="showSkills('skill-frontend')"
+                  class="choosen"
+                  data-i18n="skills.frontend"
+                >
                   Front-End Skills
                 </button>
-                <button onclick="showSkills('skill-backend')" data-i18n="skills.backend">
+                <button
+                  onclick="showSkills('skill-backend')"
+                  data-i18n="skills.backend"
+                >
                   Back-End Skills
                 </button>
-                <button onclick="showSkills('skill-language')" data-i18n="skills.language">
+                <button
+                  onclick="showSkills('skill-language')"
+                  data-i18n="skills.language"
+                >
                   Foreign Language
                 </button>
-                <button onclick="showSkills('skill-tools')" data-i18n="skills.tools">
+                <button
+                  onclick="showSkills('skill-tools')"
+                  data-i18n="skills.tools"
+                >
                   Tools & Technologies
                 </button>
                 <!-- <button onclick="showSkills('skill-soft')">Soft Skills</button> -->
@@ -376,15 +447,15 @@
                   </p>
                 </div>
                 <div class="main_skills-content-right-item-img">
-                  <img src="./images/html5.png" width="160" alt="" />
+                  <img src="./images/html5.png" width="135" alt="" />
                   <!-- Default 175 -->
-                  <img src="./images/css.png" width="160" alt="" />
-                  <img src="./images/tailwindcss.png" width="160" alt="" />
-                  <!-- <img src="./images/bootstrap.png" width="160" alt="" /> -->
-                  <!-- <img src="./images/js.png" width="160" alt="" /> -->
-                  <img src="./images/typescript.png" width="160" alt="" />
-                  <img src="./images/reactjs.png" width="160" alt="" />
-                  <img src="./images/nextjs.png" width="160" alt="" />
+                  <img src="./images/css.png" width="135" alt="" />
+                  <img src="./images/tailwindcss.png" width="135" alt="" />
+                  <!-- <img src="./images/bootstrap.png" width="135" alt="" /> -->
+                  <!-- <img src="./images/js.png" width="135" alt="" /> -->
+                  <img src="./images/typescript.png" width="135" alt="" />
+                  <img src="./images/reactjs.png" width="135" alt="" />
+                  <img src="./images/nextjs.png" width="135" alt="" />
                 </div>
               </div>
 
@@ -401,12 +472,12 @@
                   </p>
                 </div>
                 <div class="main_skills-content-right-item-img">
-                  <img src="./images/nodejs.png" width="160" alt="" />
-                  <img src="./images/expressjs.png" width="160" alt="" />
-                  <img src="./images/php.png" width="160" alt="" />
-                  <img src="./images/mongodb-seeklogo.png" width="160" alt="" />
-                  <img src="./images/mysql.png" width="160" alt="" />
-                  <img src="./images/postgresql.png" width="160" alt="" />
+                  <img src="./images/nodejs.png" width="135" alt="" />
+                  <img src="./images/expressjs.png" width="135" alt="" />
+                  <img src="./images/php.png" width="135" alt="" />
+                  <img src="./images/mongodb-seeklogo.png" width="135" alt="" />
+                  <img src="./images/mysql.png" width="135" alt="" />
+                  <img src="./images/postgresql.png" width="135" alt="" />
                 </div>
               </div>
 
@@ -432,7 +503,9 @@
                   <span>IELTS 8.0</span>
                 </div> -->
 
-                  <div class="main_skills-content-right-item-img-detail hidden-desktop">
+                  <div
+                    class="main_skills-content-right-item-img-detail hidden-desktop"
+                  >
                     <img
                       src="./images/toeic.png"
                       width="100%"
@@ -467,35 +540,35 @@
                   </p>
                 </div>
                 <div class="main_skills-content-right-item-img">
-                  <img src="./images/git.png" width="160" height="160" alt="" />
+                  <img src="./images/git.png" width="135" height="135" alt="" />
                   <img
                     src="./images/docker.png"
-                    width="160"
-                    height="160"
+                    width="135"
+                    height="135"
                     alt=""
                   />
                   <img
                     src="./images/figma.png"
-                    width="160"
-                    height="160"
+                    width="135"
+                    height="135"
                     alt=""
                   />
                   <img
                     src="./images/postman.png"
-                    width="160"
-                    height="160"
+                    width="135"
+                    height="135"
                     alt=""
                   />
                   <img
                     src="./images/selenium.png"
-                    width="160"
-                    height="160"
+                    width="135"
+                    height="135"
                     alt=""
                   />
                   <img
                     src="./images/office365.png"
-                    width="160"
-                    height="160"
+                    width="135"
+                    height="135"
                     alt=""
                   />
                 </div>
@@ -576,7 +649,9 @@
                     href="https://github.com/tqd0105/SoundCloudInterface"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span data-i18n="projects.button.source-code">Source Code</span>
+                    <span data-i18n="projects.button.source-code"
+                      >Source Code</span
+                    >
                   </a>
                 </div>
               </div>
@@ -593,7 +668,7 @@
                 <h1>2</h1>
                 <div class="main_projects-content-detail-title-text">
                   <h2 style="color: #cb6ce6">BraveSale</h2>
-                  <span >Front-End Developer</span>
+                  <span>Front-End Developer</span>
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
@@ -642,7 +717,9 @@
                     href="https://github.com/tqd0105/BraveSale-OnlineCommerce"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span data-i18n="projects.button.source-code">Source Code</span>
+                    <span data-i18n="projects.button.source-code"
+                      >Source Code</span
+                    >
                   </a>
                 </div>
               </div>
@@ -660,7 +737,7 @@
                 <h1>3</h1>
                 <div class="main_projects-content-detail-title-text">
                   <h2 style="color: #0194ff">SpaceZone</h2>
-                  <span >Full-Stack Developer</span>
+                  <span>Full-Stack Developer</span>
                 </div>
               </div>
               <div class="main_projects-content-detail-description">
@@ -751,7 +828,9 @@
                     href="https://github.com/tqd0105/SpaceZone---Social-Media"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span data-i18n="projects.button.source-code">Source Code</span>
+                    <span data-i18n="projects.button.source-code"
+                      >Source Code</span
+                    >
                   </a>
                 </div>
               </div>
@@ -857,7 +936,9 @@
                     href="https://github.com/tqd0105/student-management-system"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span data-i18n="projects.button.source-code">Source Code</span>
+                    <span data-i18n="projects.button.source-code"
+                      >Source Code</span
+                    >
                   </a>
                 </div>
               </div>
@@ -956,7 +1037,9 @@
                     href="https://github.com/tqd-tech/LTW_FlowersGiftNow_Group6"
                     class="main_projects-content-detail-link-open-items source-code"
                     ><img src="./icons/github.png" width="30" alt="" />
-                    <span data-i18n="projects.button.source-code">Source Code</span>
+                    <span data-i18n="projects.button.source-code"
+                      >Source Code</span
+                    >
                   </a>
                 </div>
               </div>
@@ -964,8 +1047,20 @@
           </div>
 
           <div class="main_projects-content-img-button">
-            <img src="./icons/previous.png" id="prevBtn" width="50" alt="" />
-            <img src="./icons/next.png" id="nextBtn" width="50" alt="" />
+            <img
+              src="./icons/previous.png"
+              id="prevBtn"
+              class="animate__animated animate__rubberBand animate__infinite"
+              width="55"
+              alt=""
+            />
+            <img
+              src="./icons/next.png"
+              id="nextBtn"
+              class="animate__animated animate__rubberBand animate__infinite"
+              width="55"
+              alt=""
+            />
           </div>
         </section>
         <section class="main_contact" id="contact">
@@ -975,18 +1070,41 @@
               <div class="main_contact-content-form">
                 <div class="main_contact-content-form-input">
                   <div class="main_contact-content-form-input-name">
-                    <input type="text" placeholder="Firstname" data-i18n-placeholder="contact.name.first" />
-                    <input type="text" placeholder="Lastname" data-i18n-placeholder="contact.name.last" />
+                    <input
+                      type="text"
+                      placeholder="Firstname"
+                      data-i18n-placeholder="contact.name.first"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Lastname"
+                      data-i18n-placeholder="contact.name.last"
+                    />
                   </div>
                   <div class="main_contact-content-form-input-email">
-                    <input type="email" placeholder="Email address" data-i18n-placeholder="contact.email" />
-                    <input type="number" placeholder="Phone number" data-i18n-placeholder="contact.phone" />
+                    <input
+                      type="email"
+                      placeholder="Email address"
+                      data-i18n-placeholder="contact.email"
+                    />
+                    <input
+                      type="number"
+                      placeholder="Phone number"
+                      data-i18n-placeholder="contact.phone"
+                    />
                   </div>
                   <div class="main_contact-content-form-input-address">
-                    <input type="text" placeholder="Type your address here." data-i18n-placeholder="contact.address" />
+                    <input
+                      type="text"
+                      placeholder="Type your address here."
+                      data-i18n-placeholder="contact.address"
+                    />
                   </div>
                   <div class="main_contact-content-form-input-message">
-                    <textarea placeholder="Type your message here." data-i18n-placeholder="contact.message"></textarea>
+                    <textarea
+                      placeholder="Type your message here."
+                      data-i18n-placeholder="contact.message"
+                    ></textarea>
                   </div>
                 </div>
                 <button id="send">
@@ -1180,43 +1298,45 @@
     </div>
 
     <!-- Download CV Options -->
-    <div class="modal-downloadcv-overlay hidden animated_animate animate__bounceIn " id="dark-mode"></div>
-      <div class="modal-downloadcv hidden relative" id="modalDownloadcv">
-        <div class="modal-downloadcv-header">
-          <img src="./icons/user_confirm.png" width="80" alt="" />
-          <p  data-i18n="modal.downloadcv"></p>
-        </div>
-        <p class="modal-downloadcv-content" data-i18n="modal.downloadcv.title">
-        </p>
-        <div class="modal-downloadcv-buttons">
-          <a
-            class="modal-downloadcv-vie"
-            id="closeModal"
-            href="/files/myCV-test.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <img src="./icons/vn.png" width="40" alt="">
-            <span>Tiếng Việt</span>
-            </a
-          >
-          <a
-            class="modal-downloadcv-en"
-            id="closeModal"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <img src="./icons/en.png" width="40" alt="">
-            <span>English</span>
-            </a
-          >
-        </div>
-        <div class="modal-downloadcv-close">
-        <img src="./icons/close.png" width="40" alt="">
+    <div
+      class="modal-downloadcv-overlay hidden animated_animate animate__bounceIn"
+      id="dark-mode"
+    ></div>
+    <div class="modal-downloadcv hidden relative" id="modalDownloadcv">
+      <div class="modal-downloadcv-header">
+        <img src="./icons/user_confirm.png" width="80" alt="" />
+        <p data-i18n="modal.downloadcv"></p>
       </div>
+      <p
+        class="modal-downloadcv-content"
+        data-i18n="modal.downloadcv.title"
+      ></p>
+      <div class="modal-downloadcv-buttons">
+        <a
+          class="modal-downloadcv-vie"
+          id="closeModal"
+          href="/files/myCV-test.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./icons/vn.png" width="40" alt="" />
+          <span>Tiếng Việt</span>
+        </a>
+        <a
+          class="modal-downloadcv-en"
+          id="closeModal"
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./icons/en.png" width="40" alt="" />
+          <span>English</span>
+        </a>
       </div>
-      
+      <div class="modal-downloadcv-close">
+        <img src="./icons/close.png" width="40" alt="" />
+      </div>
+    </div>
 
     <script
       type="module"

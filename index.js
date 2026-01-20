@@ -56,11 +56,47 @@ const navbarItems = document.querySelectorAll(".navbar__menu-item");
 const active = document.querySelector(".activeNavbar");
 
 navbarItems.forEach((item) => {
-  item.addEventListener("click", () => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault(); // Ngăn hành vi mặc định của anchor
+    
     navbarItems.forEach((remain)=> {
       remain.classList.remove("activeNavbar");
     })
     item.classList.add("activeNavbar");
+    
+    // Lấy href và tìm section tương ứng
+    const targetId = item.getAttribute("href");
+    
+    if (targetId === "#") {
+      // Nếu là Home, scroll về đầu trang
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    } else {
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        const sectionTop = targetSection.offsetTop;
+        const sectionHeight = targetSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        
+        let scrollPosition;
+        
+        // Đối với Projects và Contact, scroll đến vị trí giữa
+        if (targetId === "#projects" || targetId === "#contact" ) {
+          scrollPosition = sectionTop - ((windowHeight + 100) / 2) + (sectionHeight / 2);
+        } else {
+          // Các section khác scroll bình thường với offset navbar
+          scrollPosition = sectionTop - navbarHeight - 20;
+        }
+        
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth"
+        });
+      }
+    }
   });
 });
 
