@@ -1,7 +1,7 @@
 {
   "navbar.home": "Trang chủ",
   "navbar.hobby": "Sở thích",
-  "navbar.career": "Nghề nghiệp",
+  "navbar.career": "Sự nghiệp",
   "navbar.skills": "Kỹ năng",
   "navbar.projects": "Dự án",
   "navbar.contact": "Liên hệ",
@@ -31,9 +31,9 @@
 
   "career.title": "Mục tiêu phát triển",
   "career.goal.1": "Phát triển tư duy thiết kế UI/UX mạnh mẽ để tối ưu trải nghiệm người dùng",
-  "career.goal.2": "Làm chủ các công nghệ Frontend cơ bản như ReactJS, NextJS, TailwindCSS, và TypeScript.",
-  "career.goal.3": "Nâng cao thói quen viết mã sạch, áp dụng kiểm thử (Unit Test, E2E) và cải thiện kiểm soát phiên bản với Git trong các dự án Frontend thực tế.",
-  "career.goal.4": "Rèn luyện các kỹ năng mềm cốt lõi gồm giao tiếp, làm việc nhóm và giải quyết vấn đề, nhằm trở thành một kỹ sư toàn diện có khả năng đóng góp vào sự phát triển lâu dài của doanh nghiệp.",
+  "career.goal.2": "Làm chủ các công nghệ fullstack như NextJS, NodeJS và MongoDB.",
+  "career.goal.3": "Nâng cao thói quen viết mã sạch, áp dụng kiểm thử (Unit Test, E2E) và tối ưu hiệu suất trong các dự án fullstack.",
+  "career.goal.4": "Rèn luyện các kỹ năng mềm cốt lõi gồm giao tiếp, làm việc nhóm và giải quyết vấn đề, nhằm trở thành một kỹ sư giỏi có khả năng đóng góp vào sự phát triển lâu dài của doanh nghiệp.",
   "career.goal.5": "Trở thành một Frontend Engineer có khả năng đóng góp vào các hệ thống Frontend phức tạp và hoạt động tích cực trong việc đào tạo các newbie mới.",
 
   "skills.title": "Kỹ năng",

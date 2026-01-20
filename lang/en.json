@@ -31,9 +31,9 @@
 
   "career.title": "Career Goals",
   "career.goal.1": "Develop strong UI/UX design thinking to optimize user experience",
-  "career.goal.2": "Master essential Frontend technologies such as ReactJS, NextJS, TailwindCSS, and TypeScript.",
-  "career.goal.3": "Enhance clean code practices, implement testing (Unit Test, E2E), and improve version control with Git in real-world frontend projects.",
-  "career.goal.4": "Strengthen key soft skills including communication, teamwork, and problem-solving, and become a well-rounded engineer who can contribute to future business growth.",
+  "career.goal.2": "Master essential Fullstack technologies such as NextJS, NodeJS and MongoDB.",
+  "career.goal.3": "Enhance clean code practices, implement testing (Unit Test, E2E), and optimize performance in fullstack projects.",
+  "career.goal.4": "Strengthen key soft skills including communication, teamwork, and problem-solving, and become a good engineer who can contribute to business growth.",
   "career.goal.5": "Become a Frontend Engineer capable of contributing to complex frontend systems and actively mentoring other newbies.",
 
   "skills.title": "Skills",
