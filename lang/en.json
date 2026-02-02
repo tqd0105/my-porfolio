@@ -45,7 +45,11 @@
   "skills.frontend.text": "Involves building user interfaces and experiences, requiring a blend of precision and creativity to deliver intuitive designs.",
   "skills.backend.text": "Experienced in developing server-side applications and efficiently managing databases to ensure stable and scalable web solutions.",
   "skills.tools.text": "Proficient in utilizing various tools and technologies to enhance work efficiency, productivity, and collaboration in the development.",
-  "skills.language.text": "Foreign languages play an essential role in learning and adopting global technologies, opening up more opportunities.",
+  "skills.language.text": "Its play an essential role in learning and adopting global technologies, opening up more opportunities.",
+  "skills.language.professional-usage": "Professional Usage",
+  "skills.language.read-understand": "Read & understand technical documentation",
+  "skills.language.communicate": "Communicate in technical discussions",
+  "skills.language.write": "Write documentation and reports",
 
   "projects.title": "Highlighted Projects",
   "projects.highlights": "📌 Highlights",

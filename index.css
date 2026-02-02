@@ -925,6 +925,45 @@ main {
   gap: 1.2rem;
 }
 
+.main_skills-content-right-item-img-detail > div {
+  background: linear-gradient(135deg, #ff7913 0%, #337eff 100%);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 5px 5px 20px 8px rgb(0 0 0 / 10%);
+}
+
+.main_skills-content-right-item-img-detail > div h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.main_skills-content-right-item-img-detail > div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main_skills-content-right-item-img-detail > div ul > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main_skills-content-right-item-img-detail > div ul > div img {
+  flex-shrink: 0;
+}
+
+.main_skills-content-right-item-img-detail > div ul li {
+  font-size: 0.95rem;
+  display: inline;
+}
+
+
 .main_skills-content-right-item-img-detail span {
   font-weight: bolder;
   text-align: center;

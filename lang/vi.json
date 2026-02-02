@@ -45,7 +45,11 @@
   "skills.frontend.text": "Thành thạo việc xây dựng UI và trải nghiệm, yêu cầu sự kết hợp giữa độ chính xác và sáng tạo để tạo ra thiết kế trực quan.",
   "skills.backend.text": "Có kinh nghiệm phát triển ứng dụng server-side và quản lý dữ liệu hiệu quả để website hoạt động ổn định và có khả năng mở rộng.",
   "skills.tools.text": "Có kỹ năng sử dụng các công cụ và kỹ thuật để nâng cao hiệu suất, sản xuất và hợp tác trong quá trình phát triển.",
-  "skills.language.text": "Ngôn ngữ ngoại ngữ đóng vai trò quan trọng trong việc học và áp dụng các công nghệ toàn cầu, mở ra nhiều cơ hội hơn.",
+  "skills.language.text": "Nó đóng vai trò quan trọng trong việc học và áp dụng các công nghệ toàn cầu, mở ra nhiều cơ hội hơn.",
+    "skills.language.professional-usage": "Ứng dụng trong công việc",
+  "skills.language.read-understand": "Đọc & hiểu tài liệu kỹ thuật",
+  "skills.language.communicate": "Giao tiếp trong các thảo luận kỹ thuật",
+  "skills.language.write": "Viết tài liệu và báo cáo",
 
   "projects.title": "Dự án nổi bật",
   "projects.highlights": "📌 Nổi bật",

@@ -84,7 +84,7 @@ navbarItems.forEach((item) => {
         let scrollPosition;
         
         // Đối với Projects và Contact, scroll đến vị trí giữa
-        if (targetId === "#projects" || targetId === "#contact" || targetId === "#career") {
+        if (targetId === "#projects" || targetId === "#contact" || targetId === "#career" || targetId === "#skills") {
           scrollPosition = sectionTop - ((windowHeight + 100) / 2) + (sectionHeight / 2);
         } else {
           // Các section khác scroll bình thường với offset navbar
