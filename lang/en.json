@@ -84,6 +84,15 @@
   "footer.blog": "Blog",
   "footer.tags": "Tags",
 
-  "modal.downloadcv": "Confirm selection",
-  "modal.downloadcv.title": "What language would you like to see my CV in?"
+  "modal.downloadcv": "Choose how to view this CV",
+  "modal.downloadcv.title": "Select your preferred language and layout",
+  "modal.downloadcv.language": "Language",
+  "modal.downloadcv.style": "Style",
+  "modal.downloadcv.professional": "Professional",
+  "modal.downloadcv.professional.desc": "Detailed, multi-section layout",
+  "modal.downloadcv.simple": "Simple",
+  "modal.downloadcv.simple.desc": "Clean, one-page overview",
+  "modal.downloadcv.vi.desc": "For Vietnamese recruiters",
+  "modal.downloadcv.en.desc": "For international recruiters",
+  "modal.downloadcv.confirm": "Open Now"
 }

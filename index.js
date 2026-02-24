@@ -58,15 +58,15 @@ const active = document.querySelector(".activeNavbar");
 navbarItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault(); // Ngăn hành vi mặc định của anchor
-    
-    navbarItems.forEach((remain)=> {
+
+    navbarItems.forEach((remain) => {
       remain.classList.remove("activeNavbar");
     })
     item.classList.add("activeNavbar");
-    
+
     // Lấy href và tìm section tương ứng
     const targetId = item.getAttribute("href");
-    
+
     if (targetId === "#") {
       // Nếu là Home, scroll về đầu trang
       window.scrollTo({
@@ -80,9 +80,9 @@ navbarItems.forEach((item) => {
         const sectionHeight = targetSection.offsetHeight;
         const windowHeight = window.innerHeight;
         const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        
+
         let scrollPosition;
-        
+
         // Đối với Projects và Contact, scroll đến vị trí giữa
         if (targetId === "#projects" || targetId === "#contact" || targetId === "#career" || targetId === "#skills") {
           scrollPosition = sectionTop - ((windowHeight + 100) / 2) + (sectionHeight / 2);
@@ -90,7 +90,7 @@ navbarItems.forEach((item) => {
           // Các section khác scroll bình thường với offset navbar
           scrollPosition = sectionTop - navbarHeight - 20;
         }
-        
+
         window.scrollTo({
           top: scrollPosition,
           behavior: "smooth"
@@ -186,29 +186,29 @@ const nextBtn = document.getElementById("nextBtn");
 let currentPage = 0;
 
 function showPage(index) {
-  pages.forEach((page, i)=>{
-    page.classList.toggle("active", i===index)
+  pages.forEach((page, i) => {
+    page.classList.toggle("active", i === index)
   })
 
   prevBtn.style.display = index === 0 ? "none" : "block";
   nextBtn.style.display = index === pages.length - 1 ? "none" : "block";
 }
 
-prevBtn.addEventListener("click", ()=> {
-  if (currentPage>0) {
+prevBtn.addEventListener("click", () => {
+  if (currentPage > 0) {
     currentPage--;
     showPage(currentPage);
   }
 })
 
-nextBtn.addEventListener("click", ()=> {
-  if (currentPage< pages.length -1) {
+nextBtn.addEventListener("click", () => {
+  if (currentPage < pages.length - 1) {
     currentPage++;
     showPage(currentPage);
   }
 })
 
-showPage(currentPage); 
+showPage(currentPage);
 
 // Lướt đến phần nào thì navbar cũng highlight phần đó
 const sections = document.querySelectorAll("section");
@@ -216,7 +216,7 @@ const navLinks = document.querySelectorAll(".navbar__menu-item");
 
 window.addEventListener("scroll", () => {
   let current = null;
-  
+
   // Nếu đang ở đầu trang (ví dụ < 100px), coi là "home"
   if (window.pageYOffset < 1600) {
     current = "home";
@@ -251,7 +251,7 @@ nextTechBtns.forEach((nextBtn, index) => {
   const techContainer = nextBtn.closest('.main_projects-content-detail-description-techs');
   const techItems = techContainer.querySelector(".long-list");
   const container = techContainer.querySelector('.long-list-container');
-  
+
   // Khởi tạo state cho project này
   if (!techScrollStates[index]) {
     techScrollStates[index] = { currentPosition: 0 };
@@ -263,19 +263,19 @@ nextTechBtns.forEach((nextBtn, index) => {
     const containerWidth = container.offsetWidth;
     const maxScroll = (totalWidth - containerWidth);
     const step = containerWidth * 1; // Mỗi lần di chuyển 100% container width
-    
+
     let newPosition = techScrollStates[index].currentPosition + step;
-    
+
     // Đảm bảo không vượt quá giới hạn
     if (newPosition > maxScroll) {
       newPosition = maxScroll;
     }
-    
+
     // Chỉ di chuyển nếu có thể di chuyển
     if (newPosition > techScrollStates[index].currentPosition) {
       techScrollStates[index].currentPosition = newPosition;
-      techItems.style.transform = `translateX(-${newPosition+5}px)`;
-      console.log(`Project ${index + 3}: Moved ${newPosition}px (${((newPosition/totalWidth)*100).toFixed(1)}%)`);
+      techItems.style.transform = `translateX(-${newPosition + 5}px)`;
+      console.log(`Project ${index + 3}: Moved ${newPosition}px (${((newPosition / totalWidth) * 100).toFixed(1)}%)`);
     }
   });
 });
@@ -284,22 +284,22 @@ prevTechBtns.forEach((prevBtn, index) => {
   const techContainer = prevBtn.closest('.main_projects-content-detail-description-techs');
   const techItems = techContainer.querySelector(".long-list");
   const container = techContainer.querySelector('.long-list-container');
-  
+
   prevBtn.addEventListener("click", () => {
     const containerWidth = container.offsetWidth;
     const step = containerWidth * 1; // Mỗi lần di chuyển 100% container width (giống next)
-    
+
     let newPosition = techScrollStates[index].currentPosition - step;
-    
+
     // Đảm bảo không nhỏ hơn 0
     if (newPosition < 0) {
       newPosition = 0;
     }
-    
+
     // Chỉ di chuyển nếu có thể di chuyển
     if (newPosition < techScrollStates[index].currentPosition) {
       techScrollStates[index].currentPosition = newPosition;
-      
+
       if (newPosition === 0) {
         techItems.style.transform = "translateX(0)";
         console.log(`Project ${index + 3}: Reset to start`);
@@ -347,19 +347,49 @@ document.getElementById("shareBtn").addEventListener("click", async () => {
 const downloadcvButton = document.querySelector(".header__banner-button-downloadcv")
 const modalDownloadCVOverlay = document.querySelector(".modal-downloadcv-overlay")
 const modalDownloadCVClose = document.querySelector(".modal-downloadcv-close")
+const downloadCvConfirmBtn = document.getElementById("downloadCvConfirmBtn")
 
-downloadcvButton.addEventListener('click', ()=> {
+downloadcvButton.addEventListener('click', () => {
   modalDownloadCV.classList.remove("hidden");
   modalDownloadCVOverlay.classList.remove("hidden");
-  // document.body.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
 })
 
-modalDownloadCVClose.addEventListener("click", ()=> {
+modalDownloadCVClose.addEventListener("click", () => {
   modalDownloadCV.classList.add("hidden");
   modalDownloadCVOverlay.classList.add("hidden");
+  document.body.style.overflow = "";
 })
 
-modalDownloadCVOverlay.addEventListener("click", ()=> {
+modalDownloadCVOverlay.addEventListener("click", () => {
   modalDownloadCV.classList.add("hidden");
   modalDownloadCVOverlay.classList.add("hidden");
+  document.body.style.overflow = "";
 })
+
+// CV option selection logic
+function updateCvDownloadLink() {
+  const selectedLang = modalDownloadCV.querySelector(".modal-downloadcv-option[data-cv-lang].selected");
+  const selectedStyle = modalDownloadCV.querySelector(".modal-downloadcv-option[data-cv-style].selected");
+  if (selectedLang && selectedStyle) {
+    const lang = selectedLang.getAttribute("data-cv-lang");
+    const style = selectedStyle.getAttribute("data-cv-style");
+    downloadCvConfirmBtn.href = `/files/myCV-${style}-${lang}.pdf`;
+  }
+}
+
+modalDownloadCV.querySelectorAll(".modal-downloadcv-option[data-cv-lang]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    modalDownloadCV.querySelectorAll(".modal-downloadcv-option[data-cv-lang]").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+    updateCvDownloadLink();
+  });
+});
+
+modalDownloadCV.querySelectorAll(".modal-downloadcv-option[data-cv-style]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    modalDownloadCV.querySelectorAll(".modal-downloadcv-option[data-cv-style]").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+    updateCvDownloadLink();
+  });
+});

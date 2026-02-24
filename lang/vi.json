@@ -85,6 +85,15 @@
   "footer.tags": "Thẻ",
   "footer.html": "#HTML",
 
-  "modal.downloadcv": "Xác nhận lựa chọn",
-  "modal.downloadcv.title": "Bạn muốn xem CV của tôi theo ngôn ngữ nào?"
+  "modal.downloadcv": "Chọn cách xem CV này",
+  "modal.downloadcv.title": "Chọn ngôn ngữ và bố cục hiển thị",
+  "modal.downloadcv.language": "Ngôn ngữ",
+  "modal.downloadcv.style": "Kiểu CV",
+  "modal.downloadcv.professional": "Chuyên nghiệp",
+  "modal.downloadcv.professional.desc": "Chi tiết, nhiều mục rõ ràng",
+  "modal.downloadcv.simple": "Đơn giản",
+  "modal.downloadcv.simple.desc": "Gọn gàng, tóm tắt 1 trang",
+  "modal.downloadcv.vi.desc": "Dành cho nhà tuyển dụng Việt Nam",
+  "modal.downloadcv.en.desc": "Dành cho nhà tuyển dụng quốc tế",
+  "modal.downloadcv.confirm": "Mở ngay"
 }

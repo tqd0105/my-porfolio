@@ -598,12 +598,7 @@
                     height="135"
                     alt=""
                   />
-                  <img
-                    src="./images/figma.png"
-                    width="135"
-                    height="135"
-                    alt=""
-                  />
+                  
                   <img
                     src="./images/postman.png"
                     width="135"
@@ -611,13 +606,19 @@
                     alt=""
                   />
                   <img
-                    src="./images/selenium.png"
+                    src="./images/debian.png"
                     width="135"
                     height="135"
                     alt=""
                   />
                   <img
-                    src="./images/office365.png"
+                    src="./images/vercel.png"
+                    width="135"
+                    height="135"
+                    alt=""
+                  />
+                  <img
+                    src="./images/render.png"
                     width="135"
                     height="135"
                     alt=""
@@ -812,8 +813,8 @@
                       Login/Register (Auth JWT)
                       <span class="divide-highlight">•</span> Dark Mode
                       <span class="divide-highlight">•</span> Social Interaction (Like, Comment, Share)
+                      <br/>
                       <span class="divide-highlight">•</span>  Profile Customization
-                      <br />
                       <span class="divide-highlight">•</span> Chatting 
                       <span class="divide-highlight">•</span>
                       Friend Connection
@@ -921,13 +922,11 @@
                   >
                     <p style="text-align: center">
                       <span class="divide-highlight">•</span>
-                      Login/Register (Authentication JWT, Authorization & 2FA)
+                      User authentication & RBAC (Teacher / Student)
                       <span class="divide-highlight">•</span> QR Check
-                      Attendance <span class="divide-highlight">•</span> Manage
-                      Classes
-                      <br />
-                      <span class="divide-highlight">•</span> Students
-                      <span class="divide-highlight">•</span> Teachers
+                      Attendance <span class="divide-highlight">•</span> 
+                      Class/Session/Student Management
+                      <!-- <br /> -->
                       <span class="divide-highlight">•</span>
                       Responsive
                     </p>
@@ -1162,10 +1161,10 @@
                 <button id="send">
                   <span data-i18n="contact.button">Send message</span>
                 </button>
-                <button class="main_contact-content-form-input-success">
+                <!-- <button class="main_contact-content-form-input-success">
                   <img src="./icons/check.png" width="25" alt="" />
                   <span data-i18n="contact.button.success">Success</span>
-                </button>
+                </button> -->
               </div>
               <div class="main_contact-content-infor">
                 <a
@@ -1208,7 +1207,7 @@
                   <img src="./icons/linkedln.png" width="45" alt="" />
                   <div class="main_contact-content-infor-title-text">
                     <span>Linkedln</span>
-                    <span>@username</span>
+                    <span>tqd0105</span>
                   </div>
                 </a>
 
@@ -1356,35 +1355,64 @@
     ></div>
     <div class="modal-downloadcv hidden relative" id="modalDownloadcv">
       <div class="modal-downloadcv-header">
-        <img src="./icons/user_confirm.png" width="80" alt="" />
-        <p data-i18n="modal.downloadcv"></p>
+        <img src="./icons/cv.png" width="80" alt="" />
+        <p data-i18n="modal.downloadcv">Confirm selection</p>
       </div>
       <p
         class="modal-downloadcv-content"
         data-i18n="modal.downloadcv.title"
-      ></p>
-      <div class="modal-downloadcv-buttons">
-        <a
-          class="modal-downloadcv-vie"
-          id="closeModal"
-          href="/files/myCV-test.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./icons/vn.png" width="40" alt="" />
-          <span>Tiếng Việt</span>
-        </a>
-        <a
-          class="modal-downloadcv-en"
-          id="closeModal"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./icons/en.png" width="40" alt="" />
-          <span>English</span>
-        </a>
+      >Choose your preferred CV format</p>
+
+      <!-- Group 1: Language -->
+      <div class="modal-downloadcv-group">
+        <div class="modal-downloadcv-group-label">
+          <span data-i18n="modal.downloadcv.language">Language</span>
+        </div>
+        <div class="modal-downloadcv-options">
+          <button class="modal-downloadcv-option selected" data-cv-lang="vi">
+            <img src="./icons/vn.png" width="30" alt="" />
+            <span>Tiếng Việt</span>
+            <small data-i18n="modal.downloadcv.vi.desc">Dành cho nhà tuyển dụng Việt Nam</small>
+          </button>
+          <button class="modal-downloadcv-option" data-cv-lang="en">
+            <img src="./icons/en.png" width="30" alt="" />
+            <span>English</span>
+            <small data-i18n="modal.downloadcv.en.desc">For international recruiters</small>
+          </button>
+        </div>
       </div>
+
+      <!-- Group 2: Style -->
+      <div class="modal-downloadcv-group">
+        <div class="modal-downloadcv-group-label">
+          <span data-i18n="modal.downloadcv.style">Style</span>
+        </div>
+        <div class="modal-downloadcv-options">
+          <button class="modal-downloadcv-option selected" data-cv-style="pro">
+            <img src="./icons/pro.png" width="26" alt="" />
+            <span data-i18n="modal.downloadcv.professional">Professional</span>
+            <small data-i18n="modal.downloadcv.professional.desc">Detailed, multi-section layout</small>
+          </button>
+          <button class="modal-downloadcv-option" data-cv-style="simple">
+            <img src="./icons/basic.png" width="26" alt="" />
+            <span data-i18n="modal.downloadcv.simple">Simple</span>
+            <small data-i18n="modal.downloadcv.simple.desc">Clean, one-page overview</small>
+          </button>
+        </div>
+      </div>
+
+      <!-- Confirm Button -->
+      <a
+        class="modal-downloadcv-confirm"
+        id="downloadCvConfirmBtn"
+        href="/files/myCV-professional-vi.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./icons/open.png" width="24" alt="" />
+        <span data-i18n="modal.downloadcv.confirm">Open Now</span>
+      </a>
+
       <div class="modal-downloadcv-close">
         <img src="./icons/close.png" width="40" alt="" />
       </div>

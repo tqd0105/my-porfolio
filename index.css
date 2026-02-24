@@ -1389,6 +1389,11 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
+.main_contact-content-form button:hover {
+  background-image: linear-gradient(to right, #68fc60, #ffea5f);
+  color: black;
+}
+
 .main_contact-content-form-input-name,
 .main_contact-content-form-input-email {
   display: flex;
@@ -1756,11 +1761,11 @@ footer {
 
 .modal-downloadcv {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
-  padding: 1.4rem 1.2rem;
+  padding: 1.4rem 1.6rem 1.8rem;
   border-radius: 2rem;
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
@@ -1768,7 +1773,7 @@ footer {
   background-image: linear-gradient(to top, #5c5c5cc5 0%, #ffffff 100%);
   text-align: center;
   z-index: 100;
-  width: 400px;
+  width: 520px;
   animation: flash 0.4s ease-in-out;
   animation-iteration-count: 2;
 }
@@ -1815,6 +1820,166 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+}
+
+.modal-downloadcv-group {
+  margin-top: 1.2rem;
+  padding: 0.6rem 0.8rem 0.8rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.modal-downloadcv-group-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-downloadcv-group-label img {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.modal-downloadcv-options {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.modal-downloadcv-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 1rem;
+  border: 2.5px solid #ccc;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.modal-downloadcv-option > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-downloadcv-option small {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #777;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.modal-downloadcv-option.selected small {
+  color: #3377cc;
+}
+
+.modal-downloadcv-option img {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.modal-downloadcv-option:hover {
+  border-color: #888;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.modal-downloadcv-option.selected {
+  border-color: #0073ff;
+  background: linear-gradient(135deg, #e8f0fe 0%, #d0e4ff 100%);
+  color: #0055cc;
+  box-shadow: 0 0 0 2px rgba(0, 115, 255, 0.15);
+}
+
+.modal-downloadcv-confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 1.4rem;
+  border: none;
+  background: linear-gradient(135deg, #0073ff 0%, #00c6ff 100%);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow:
+    rgba(0, 115, 255, 0.25) 0px 4px 12px,
+    rgba(0, 115, 255, 0.15) 0px 8px 24px;
+}
+
+.modal-downloadcv-confirm img {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  filter: brightness(0) invert(1);
+}
+
+.modal-downloadcv-confirm:hover {
+  background: linear-gradient(135deg, #005bd4 0%, #00a8e0 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    rgba(0, 115, 255, 0.35) 0px 6px 16px,
+    rgba(0, 115, 255, 0.2) 0px 12px 32px;
+}
+
+/* Dark theme for new modal elements */
+.modal-downloadcv.dark-theme .modal-downloadcv-group {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-group-label {
+  color: #aaa;
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-option {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #555;
+  color: #ccc;
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-option:hover {
+  border-color: #888;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-option.selected {
+  border-color: #4da6ff;
+  background: linear-gradient(135deg, #0d2744 0%, #0a3260 100%);
+  color: #6db8ff;
+  box-shadow: 0 0 0 2px rgba(77, 166, 255, 0.2);
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-option small {
+  color: #888;
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-option.selected small {
+  color: #5aa0dd;
 }
 
 .modal-downloadcv-vie {
