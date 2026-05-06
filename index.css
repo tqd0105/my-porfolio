@@ -2025,7 +2025,7 @@ footer {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-@media (min-width: 769px) and (max-width: 1349px) {
+@media (min-width: 769px) and (max-width: 1319px) {
   .hidden-tablet {
     display: none;
   }
@@ -2122,7 +2122,7 @@ footer {
   }
 }
 
-@media (min-width: 1350px) and (max-width: 1745px) {
+@media (min-width: 1320px) and (max-width: 1745px) {
   .hidden-laptop {
     display: none;
   }
