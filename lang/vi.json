@@ -19,9 +19,11 @@
   "about.phone": "Số điện thoại",
   "about.email": "Email",
   "about.hometown": "Quê quán",
+  "about.hometown.detail": "xã Bình Sơn, tỉnh Quảng Ngãi",
   "about.address": "Địa chỉ",
+  "about.address.detail": "Thủ Đức, TP.HCM, Việt Nam",
   "about.education": "Học vấn",
-  "about.education.detail": "Trường Santa Fe College, Florida, Hoa Kỳ – Ngành: Công nghệ thông tin",
+  "about.education.detail": "Trường Đại học Giao Thông Vận Tải TP.HCM",
 
   "hobby.title": "Sở thích",
   "hobby.soccer": "Chơi bóng đá",
@@ -92,7 +94,7 @@
   "modal.downloadcv.professional": "Chuyên nghiệp",
   "modal.downloadcv.professional.desc": "Chi tiết, nhiều mục rõ ràng",
   "modal.downloadcv.simple": "Đơn giản",
-  "modal.downloadcv.simple.desc": "Gọn gàng, tóm tắt 1 trang",
+  "modal.downloadcv.simple.desc": "Bố cục gọn gàng, tối giản",
   "modal.downloadcv.vi.desc": "Dành cho nhà tuyển dụng Việt Nam",
   "modal.downloadcv.en.desc": "Dành cho nhà tuyển dụng quốc tế",
   "modal.downloadcv.confirm": "Mở ngay"

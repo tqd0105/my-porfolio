@@ -374,7 +374,7 @@ function updateCvDownloadLink() {
   if (selectedLang && selectedStyle) {
     const lang = selectedLang.getAttribute("data-cv-lang");
     const style = selectedStyle.getAttribute("data-cv-style");
-    downloadCvConfirmBtn.href = `/files/myCV-${style}-${lang}.pdf`;
+    downloadCvConfirmBtn.href = `/files/TRANQUANGDUNG_THUDUC_FULLSTACKDEV_${style}_${lang}.pdf`;
   }
 }
 

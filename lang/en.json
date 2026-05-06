@@ -19,9 +19,11 @@
   "about.phone": "Phone",
   "about.email": "Email",
   "about.hometown": "Hometown",
+  "about.hometown.detail": "Binh Son, Quang Ngai",
   "about.address": "Address",
+  "about.address.detail": "Thu Duc, TP.HCM, Vietnam",
   "about.education": "Education",
-  "about.education.detail": "Santa Fe College, Florida, USA – Major: Information Technology",
+  "about.education.detail": "University of Transport Ho Chi Minh City",
 
   "hobby.title": "Hobbies",
   "hobby.soccer": "Play Soccer",
@@ -91,7 +93,7 @@
   "modal.downloadcv.professional": "Professional",
   "modal.downloadcv.professional.desc": "Detailed, multi-section layout",
   "modal.downloadcv.simple": "Simple",
-  "modal.downloadcv.simple.desc": "Clean, one-page overview",
+  "modal.downloadcv.simple.desc": "Clean, minimal layout",
   "modal.downloadcv.vi.desc": "For Vietnamese recruiters",
   "modal.downloadcv.en.desc": "For international recruiters",
   "modal.downloadcv.confirm": "Open Now"
