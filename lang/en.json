@@ -96,5 +96,6 @@
   "modal.downloadcv.simple.desc": "Clean, minimal layout",
   "modal.downloadcv.vi.desc": "For Vietnamese recruiters",
   "modal.downloadcv.en.desc": "For international recruiters",
-  "modal.downloadcv.confirm": "Open Now"
+  "modal.downloadcv.confirm": "Open Now",
+  "modal.downloadcv.sync-warning": "CV updates may take some time to sync. Feel free to contact me via the email below for the latest version."
 }

@@ -1765,7 +1765,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
-  padding: 1.4rem 1.6rem 1.8rem;
+  padding: 1.4rem 1.6rem 1.4rem;
   border-radius: 2rem;
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
@@ -1980,6 +1980,46 @@ footer {
 
 .modal-downloadcv.dark-theme .modal-downloadcv-option.selected small {
   color: #5aa0dd;
+}
+
+.modal-downloadcv-warning {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 0, 0, 0.396);
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.281);
+  border: 1px solid rgba(255, 166, 0, 0.884);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.modal-downloadcv-warning img {
+  flex-shrink: 0;
+  width: 20px !important;
+  height: 20px !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.modal-downloadcv-warning p {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  color: #ffff02 !important;
+  font-weight: 500 !important;
+}
+
+/* Dark theme style */
+.modal-downloadcv.dark-theme .modal-downloadcv-warning {
+  background: rgba(255, 180, 0, 0.08);
+  border-color: rgba(255, 180, 0, 0.2);
+}
+
+.modal-downloadcv.dark-theme .modal-downloadcv-warning p {
+  color: #ffb84d !important;
 }
 
 .modal-downloadcv-vie {

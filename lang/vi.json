@@ -97,5 +97,6 @@
   "modal.downloadcv.simple.desc": "Bố cục gọn gàng, tối giản",
   "modal.downloadcv.vi.desc": "Dành cho nhà tuyển dụng Việt Nam",
   "modal.downloadcv.en.desc": "Dành cho nhà tuyển dụng quốc tế",
-  "modal.downloadcv.confirm": "Mở ngay"
+  "modal.downloadcv.confirm": "Mở ngay",
+  "modal.downloadcv.sync-warning": "Cập nhật CV có thể mất chút thời gian để đồng bộ hóa. Liên hệ với tôi qua email dưới đây để có phiên bản mới nhất."
 }
